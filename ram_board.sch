@@ -104,9 +104,7 @@ Wire Wire Line
 Wire Wire Line
 	1935 3175 1690 3175
 Wire Wire Line
-	1935 3275 1690 3275
-Wire Wire Line
-	1935 3375 1690 3375
+	1935 3775 1690 3775
 Wire Wire Line
 	1935 3875 1690 3875
 Wire Wire Line
@@ -191,9 +189,9 @@ Text Label 1695 3175 0    50   ~ 0
 RAM_WE
 Text Label 1700 3875 0    50   ~ 0
 GND
-Text Label 1695 3275 0    50   ~ 0
+Text Label 1695 3775 0    50   ~ 0
 ROM_CE
-Text Label 1695 3375 0    50   ~ 0
+Text Label 2680 3875 2    50   ~ 0
 ROM_OE
 $Comp
 L power:GND #PWR08
@@ -258,7 +256,7 @@ Entry Wire Line
 Entry Wire Line
 	2680 2175 2780 2075
 Entry Wire Line
-	1690 3375 1590 3275
+	2680 3875 2780 3775
 Entry Wire Line
 	1690 3175 1590 3075
 Entry Wire Line
@@ -612,9 +610,9 @@ Wire Wire Line
 Wire Wire Line
 	6450 4990 6205 4990
 Text Label 6215 4890 0    50   ~ 0
-RAM_CE
+ROM_CE
 Text Label 6210 4990 0    50   ~ 0
-RAM_OE
+ROM_OE
 Entry Wire Line
 	6205 4990 6105 4890
 Entry Wire Line
@@ -827,26 +825,20 @@ Connection ~ 7505 1725
 Wire Wire Line
 	7505 1725 7160 1725
 Wire Wire Line
-	2435 2975 2680 2975
+	1935 3375 1690 3375
 Wire Wire Line
-	2435 3075 2680 3075
+	2435 3375 2680 3375
 Wire Wire Line
-	2435 3175 2680 3175
-Wire Wire Line
-	2435 3275 2680 3275
+	1935 3475 1690 3475
 Wire Wire Line
 	2435 3475 2680 3475
 Wire Wire Line
 	2435 3575 2680 3575
 Wire Wire Line
 	2435 3675 2680 3675
-Text Label 2530 2975 2    50   ~ 0
-D0
-Text Label 2530 3075 2    50   ~ 0
-D1
-Text Label 2530 3175 2    50   ~ 0
+Text Label 2530 3375 2    50   ~ 0
 D2
-Text Label 2530 3275 2    50   ~ 0
+Text Label 1840 3475 0    50   ~ 0
 D3
 Text Label 2585 3475 2    50   ~ 0
 GND
@@ -855,56 +847,64 @@ D4
 Text Label 2530 3675 2    50   ~ 0
 D5
 Entry Wire Line
-	2780 2875 2680 2975
-Entry Wire Line
-	2780 2975 2680 3075
-Entry Wire Line
 	2680 3675 2780 3575
 Entry Wire Line
 	2680 3575 2780 3475
 Entry Wire Line
 	2680 3475 2780 3375
 Entry Wire Line
-	2680 3275 2780 3175
+	1690 3475 1590 3375
 Entry Wire Line
-	2680 3175 2780 3075
+	2680 3375 2780 3275
 Wire Wire Line
 	1690 2875 1935 2875
 Entry Wire Line
-	1690 3275 1590 3175
+	1690 3775 1590 3675
 Entry Wire Line
 	1690 3875 1590 3775
 NoConn ~ 2435 2875
-NoConn ~ 1935 3775
-NoConn ~ 1935 3475
 Wire Wire Line
 	1935 3575 1690 3575
 Text Label 1700 3575 0    50   ~ 0
 GND
 Entry Wire Line
 	1690 3575 1590 3475
-NoConn ~ 1935 3675
-NoConn ~ 2435 3375
+Wire Wire Line
+	1935 3675 1690 3675
 Wire Wire Line
 	2435 3775 2680 3775
-Wire Wire Line
-	2435 3875 2680 3875
-Text Label 2530 3775 2    50   ~ 0
+Text Label 1840 3675 0    50   ~ 0
 D6
-Text Label 2530 3875 2    50   ~ 0
+Text Label 2530 3775 2    50   ~ 0
 D7
 Entry Wire Line
-	2680 3875 2780 3775
-Entry Wire Line
 	2680 3775 2780 3675
+Entry Wire Line
+	1690 3675 1590 3575
+NoConn ~ 2435 2975
+Wire Wire Line
+	1935 3275 1690 3275
+Text Label 1840 3275 0    50   ~ 0
+D0
+Text Label 1840 3375 0    50   ~ 0
+D1
+Entry Wire Line
+	1590 3175 1690 3275
+Entry Wire Line
+	1590 3275 1690 3375
+NoConn ~ 2435 3075
+NoConn ~ 2435 3175
+NoConn ~ 2435 3275
+Wire Wire Line
+	2435 3875 2680 3875
 Wire Bus Line
 	5580 2625 5580 3460
 Wire Bus Line
 	7995 2560 7995 3395
 Wire Bus Line
-	6105 2560 6105 4990
-Wire Bus Line
 	2780 1845 2780 3875
+Wire Bus Line
+	6105 2560 6105 4990
 Wire Bus Line
 	1590 1845 1590 3875
 Wire Bus Line
