@@ -1,0 +1,12 @@
+Reference, Quantity, Value, Footprint, Datasheet, Description, MPN, Manufacturer
+C1 C2 C3 ,3,"100nF","Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder","https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf","Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%","CC0603JRX7R9BB104","Yageo"
+C4 ,1,"100uF","Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder","https://www.mouser.com/ProductDetail/Murata-Electronics/GRM31CR60J107KE39L?qs=sGAEpiMZZMvsSlwiRhF8qn%2FMY8sF09EMDof8ZcfiBgehwz2i%2Fojzzg%3D%3D","Multilayer Ceramic Capacitors MLCC - SMD/SMT 100UF 6.3V 10% 1206","GRM31CR60J107KE39L","Murata Electronics"
+D1 ,1,"LED","LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder","~"
+D2 D3 ,2,"LED","LED_SMD:LED_2C_0603_1608Metric_Pad1.05x0.95mm_HandSolder","https://www.mouser.com/datasheet/2/348/sml-d22-e-1508165.pdf","Standard LEDs - SMD Red/YelGrn 620/570nm 16/10mcd 65/67mW 5mA","SML-D22MUWT86","ROHM Semiconductor"
+J1 ,1,"Conn_02x20_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal","~"
+J2 ,1,"Conn_02x05_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Horizontal","~"
+R1 R3 R4 R5 R6 ,5,"360R","Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder","https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf","Thick Film Resistors - SMD 360 ohm 1%","CR0603-FX-3600ELF","Bourns"
+R2 ,1,"10K","Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder","https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf","Thick Film Resistors - SMD 10K 1% 1/10W","CR0603-FX-1002ELF","Bourns"
+U1 ,1,"IS61LV5128AL-10TLI","Package_SO:TSOP-II-44_10.16x18.41mm_P0.8mm","http://www.issi.com/WW/pdf/61-64C5128AL.pdf","SRAM 4Mb 512Kx8 10ns Async SRAM 3.3v","IS61LV5128AL-10TLI","ISSI"
+U2 ,1,"SST39VF040-70-4C-NHE","Package_LCC:PLCC-32_SMD-Socket","https://www.mouser.com/datasheet/2/268/20005023B-709002.pdf","NOR Flash 4M (512Kx8) 70ns 2.7-3.6V Commercial","SST39VF040-70-4C-NHE","Microchip Technology"
+U3 ,1,"74LVC04A","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf","Inverters 3.3V HEX INV","74LVC04APW,112","Nexperia"
