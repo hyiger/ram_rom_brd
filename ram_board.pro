@@ -1,4 +1,4 @@
-update=Wednesday, July 03, 2019 at 01:37:09 PM
+update=Friday, July 05, 2019 at 01:05:27 AM
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=
+LastNetListRead=ram_board.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -201,9 +201,9 @@ Name=B.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.B.Adhes]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.F.Adhes]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.B.Paste]
 Enabled=1
 [pcbnew/Layer.F.Paste]
@@ -217,13 +217,13 @@ Enabled=1
 [pcbnew/Layer.F.Mask]
 Enabled=1
 [pcbnew/Layer.Dwgs.User]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Cmts.User]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Eco1.User]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Eco2.User]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Edge.Cuts]
 Enabled=1
 [pcbnew/Layer.Margin]
@@ -233,9 +233,9 @@ Enabled=1
 [pcbnew/Layer.F.CrtYd]
 Enabled=1
 [pcbnew/Layer.B.Fab]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.F.Fab]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Rescue]
 Enabled=0
 [pcbnew/Netclasses]
