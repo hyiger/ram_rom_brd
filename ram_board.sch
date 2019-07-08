@@ -782,7 +782,7 @@ Wire Wire Line
 	1800 5050 2045 5050
 Text Label 1895 4750 2    50   ~ 0
 D2
-Text Label 1205 4850 0    50   ~ 0
+Text Label 1070 4850 0    50   ~ 0
 D3
 Text Label 1950 4850 2    50   ~ 0
 GND
@@ -817,7 +817,7 @@ Wire Wire Line
 	1300 5050 1055 5050
 Wire Wire Line
 	1800 5150 2045 5150
-Text Label 1205 5050 0    50   ~ 0
+Text Label 1070 5050 0    50   ~ 0
 D6
 Text Label 1895 5150 2    50   ~ 0
 D7
@@ -828,9 +828,9 @@ Entry Wire Line
 NoConn ~ 1800 4350
 Wire Wire Line
 	1300 4650 1055 4650
-Text Label 1205 4650 0    50   ~ 0
+Text Label 1070 4650 0    50   ~ 0
 D0
-Text Label 1205 4750 0    50   ~ 0
+Text Label 1070 4750 0    50   ~ 0
 D1
 Entry Wire Line
 	955  4550 1055 4650
@@ -1247,6 +1247,10 @@ F 6 "ROHM Semiconductor" H 2910 1235 50  0001 C CNN "Manufacturer"
 	1    2910 1235
 	-1   0    0    -1  
 $EndComp
+Text Notes 3080 1110 0    50   ~ 0
+red
+Text Notes 3085 1320 0    50   ~ 0
+green
 Wire Bus Line
 	5020 3190 5020 4025
 Wire Bus Line
@@ -1259,8 +1263,4 @@ Wire Bus Line
 	955  3220 955  5250
 Wire Bus Line
 	3130 3190 3130 5515
-Text Notes 3080 1110 0    50   ~ 0
-red
-Text Notes 3085 1320 0    50   ~ 0
-green
 $EndSCHEMATC
