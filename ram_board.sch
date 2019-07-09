@@ -31,24 +31,24 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_02x20_Odd_Even J1
 U 1 1 5D1B0B59
-P 1500 4250
-F 0 "J1" H 1550 5367 50  0000 C CNN
-F 1 "Conn_02x20_Odd_Even" H 1550 5276 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal" H 1500 4250 50  0001 C CNN
-F 3 "~" H 1500 4250 50  0001 C CNN
-	1    1500 4250
-	1    0    0    -1  
+P 1480 4040
+F 0 "J1" H 1530 5157 50  0000 C CNN
+F 1 "Bus" H 1530 5066 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal" H 1480 4040 50  0001 C CNN
+F 3 "~" H 1480 4040 50  0001 C CNN
+	1    1480 4040
+	1    0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5D1B359C
-P 1495 6115
-F 0 "J2" H 1545 6532 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 1545 6441 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Horizontal" H 1495 6115 50  0001 C CNN
-F 3 "~" H 1495 6115 50  0001 C CNN
-	1    1495 6115
-	1    0    0    -1  
+P 1495 5645
+F 0 "J2" H 1545 6062 50  0000 C CNN
+F 1 "PWR" H 1545 5971 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Horizontal" H 1495 5645 50  0001 C CNN
+F 3 "~" H 1495 5645 50  0001 C CNN
+	1    1495 5645
+	1    0    0    1   
 $EndComp
 $Comp
 L ram_board-rescue:SST39VF040-70-4C-NHE-Memory_Flash U2
@@ -65,100 +65,96 @@ F 6 "Microchip Technology" H 9040 4555 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 4350 1055 4350
+	1280 4840 1035 4840
 Wire Wire Line
-	1300 4450 1055 4450
+	1280 4740 1035 4740
 Wire Wire Line
-	1300 4550 1055 4550
+	1280 4640 1035 4640
 Wire Wire Line
-	1300 5150 1055 5150
+	1280 3140 1035 3140
 Wire Wire Line
-	1300 5250 1055 5250
+	1280 3040 1035 3040
 Wire Wire Line
-	2045 3350 1800 3350
+	2025 4540 1780 4540
 Wire Wire Line
-	2045 3450 1800 3450
+	2025 4440 1780 4440
 Wire Wire Line
-	2045 3550 1800 3550
+	2025 4340 1780 4340
 Wire Wire Line
-	2045 3650 1800 3650
+	2025 4240 1780 4240
 Wire Wire Line
-	2045 3750 1800 3750
+	2025 4040 1780 4040
 Wire Wire Line
-	2045 3850 1800 3850
+	2025 3940 1780 3940
 Wire Wire Line
-	2045 3950 1800 3950
+	2025 3840 1780 3840
 Wire Wire Line
-	2045 4050 1800 4050
+	2025 3740 1780 3740
 Wire Wire Line
-	2045 4150 1800 4150
+	2025 4940 1780 4940
 Wire Wire Line
-	1055 3350 1300 3350
+	1035 4940 1280 4940
 Wire Wire Line
-	1055 3450 1300 3450
+	1035 4540 1280 4540
 Wire Wire Line
-	1055 3550 1300 3550
+	1035 4440 1280 4440
 Wire Wire Line
-	1055 3650 1300 3650
+	1035 4340 1280 4340
 Wire Wire Line
-	1055 3750 1300 3750
+	1035 4240 1280 4240
 Wire Wire Line
-	1055 3850 1300 3850
+	1035 4140 1280 4140
 Wire Wire Line
-	1055 3950 1300 3950
+	1035 4040 1280 4040
 Wire Wire Line
-	1055 4050 1300 4050
+	1035 3940 1280 3940
 Wire Wire Line
-	1055 4150 1300 4150
-Text Label 1110 3550 0    50   ~ 0
-A4
-Text Label 1825 3550 0    50   ~ 0
-A5
-Text Label 1105 3650 0    50   ~ 0
-A6
-Text Label 1825 3650 0    50   ~ 0
-A7
-Text Label 1100 3750 0    50   ~ 0
-A8
-Text Label 1925 3750 2    50   ~ 0
-A9
-Text Label 1240 3850 2    50   ~ 0
-A10
-Text Label 1970 3850 2    50   ~ 0
-A11
-Text Label 1240 3950 2    50   ~ 0
-A12
-Text Label 1970 3950 2    50   ~ 0
-A13
-Text Label 1240 4050 2    50   ~ 0
-A14
-Text Label 1970 4050 2    50   ~ 0
-A15
-Text Label 1240 4150 2    50   ~ 0
-A16
-Text Label 1970 4150 2    50   ~ 0
-A17
-Text Label 1240 4250 2    50   ~ 0
-A18
-Text Label 1825 3450 0    50   ~ 0
-A3
-Text Label 1115 3450 0    50   ~ 0
+	1035 3840 1280 3840
+Text Label 1090 4440 0    50   ~ 0
 A2
-Text Label 1840 3350 0    50   ~ 0
-A1
-Text Label 1115 3350 0    50   ~ 0
+Text Label 1805 4340 0    50   ~ 0
+A5
+Text Label 1085 4340 0    50   ~ 0
+A4
+Text Label 1805 4240 0    50   ~ 0
+A7
+Text Label 1080 4240 0    50   ~ 0
+A8
+Text Label 1220 4140 2    50   ~ 0
+A10
+Text Label 1935 4040 2    50   ~ 0
+A11
+Text Label 1220 4040 2    50   ~ 0
+A12
+Text Label 1930 3940 2    50   ~ 0
+A13
+Text Label 1220 3940 2    50   ~ 0
+A14
+Text Label 1935 3840 2    50   ~ 0
+A15
+Text Label 1220 3840 2    50   ~ 0
+A16
+Text Label 1935 3740 2    50   ~ 0
+A17
+Text Label 1220 3740 2    50   ~ 0
+A18
+Text Label 1805 4440 0    50   ~ 0
+A3
+Text Label 1095 4540 0    50   ~ 0
 A0
-Text Label 1065 4350 0    50   ~ 0
-RAM_CE
-Text Label 1060 4450 0    50   ~ 0
-RAM_OE
-Text Label 1060 4550 0    50   ~ 0
-RAM_WE
-Text Label 1065 5250 0    50   ~ 0
+Text Label 1820 4540 0    50   ~ 0
+A1
+Text Label 1095 4940 0    50   ~ 0
 GND
-Text Label 1060 5150 0    50   ~ 0
+Text Label 1805 3640 0    50   ~ 0
+RAM_CE
+Text Label 1055 3640 0    50   ~ 0
+RAM_OE
+Text Label 1795 3540 0    50   ~ 0
+RAM_WE
+Text Label 1060 3140 0    50   ~ 0
 ROM_CE
-Text Label 2045 5250 2    50   ~ 0
+Text Label 2010 3040 2    50   ~ 0
 ROM_OE
 $Comp
 L power:GND #PWR08
@@ -183,53 +179,53 @@ F 3 "" H 9040 5905 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Entry Wire Line
-	2145 3250 2045 3350
+	2125 3340 2025 3440
 Entry Wire Line
-	2145 3350 2045 3450
+	935  3540 1035 3640
 Entry Wire Line
-	1055 4350 955  4250
+	1035 3140 935  3040
 Entry Wire Line
-	1055 4150 955  4050
+	1035 4340 935  4240
 Entry Wire Line
-	1055 4050 955  3950
+	1035 4240 935  4140
 Entry Wire Line
-	1055 3950 955  3850
+	1035 4140 935  4040
 Entry Wire Line
-	1055 3850 955  3750
+	1035 4040 935  3940
 Entry Wire Line
-	1055 3750 955  3650
+	1035 3940 935  3840
 Entry Wire Line
-	1055 3650 955  3550
+	1035 3840 935  3740
 Entry Wire Line
-	1055 3550 955  3450
+	1035 3740 935  3640
 Entry Wire Line
-	1055 3450 955  3350
+	1035 3540 935  3440
 Entry Wire Line
-	1055 3350 955  3250
+	1035 3040 935  2940
 Entry Wire Line
-	1055 4250 955  4150
+	1035 4440 935  4340
 Entry Wire Line
-	2045 4150 2145 4050
+	2025 3040 2125 2940
 Entry Wire Line
-	2045 4050 2145 3950
+	2025 4040 2125 3940
 Entry Wire Line
-	2045 3950 2145 3850
+	2025 3940 2125 3840
 Entry Wire Line
-	2045 3850 2145 3750
+	2025 3840 2125 3740
 Entry Wire Line
-	2045 3750 2145 3650
+	2025 3740 2125 3640
 Entry Wire Line
-	2045 3650 2145 3550
+	2025 3640 2125 3540
 Entry Wire Line
-	2045 3550 2145 3450
+	2025 3540 2125 3440
 Entry Wire Line
-	2045 5250 2145 5150
+	2025 4940 2125 4840
 Entry Wire Line
-	1055 4550 955  4450
+	1035 3340 935  3240
 Entry Wire Line
-	1055 4450 955  4350
+	1035 3240 935  3140
 Entry Wire Line
-	1055 4350 955  4250
+	1035 3140 935  3040
 Entry Wire Line
 	5125 3530 5025 3430
 Entry Wire Line
@@ -593,7 +589,7 @@ L Device:R_Small R2
 U 1 1 5D24A1BE
 P 7090 5065
 F 0 "R2" V 7286 5065 50  0000 C CNN
-F 1 "10K" V 7195 5065 50  0000 C CNN
+F 1 "1K" V 7195 5065 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7090 5065 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 7090 5065 50  0001 C CNN
 F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 7090 5065 50  0001 C CNN "Description"
@@ -638,50 +634,28 @@ $EndComp
 $Comp
 L power:+3.3V #PWR06
 U 1 1 5D282BFD
-P 1295 6015
-F 0 "#PWR06" H 1295 5865 50  0001 C CNN
-F 1 "+3.3V" H 1310 6188 50  0000 C CNN
-F 2 "" H 1295 6015 50  0001 C CNN
-F 3 "" H 1295 6015 50  0001 C CNN
-	1    1295 6015
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1795 6215 1795 6315
-Connection ~ 1795 6315
-Wire Wire Line
-	1795 6315 1795 6425
-Wire Wire Line
-	1295 6215 1295 6315
-Connection ~ 1295 6315
-Wire Wire Line
-	1295 6315 1295 6415
-$Comp
-L power:GND #PWR011
-U 1 1 5D2B28F3
-P 1795 6425
-F 0 "#PWR011" H 1795 6175 50  0001 C CNN
-F 1 "GND" H 1800 6252 50  0000 C CNN
-F 2 "" H 1795 6425 50  0001 C CNN
-F 3 "" H 1795 6425 50  0001 C CNN
-	1    1795 6425
-	1    0    0    -1  
+P 810 5545
+F 0 "#PWR06" H 810 5395 50  0001 C CNN
+F 1 "+3.3V" H 825 5718 50  0000 C CNN
+F 2 "" H 810 5545 50  0001 C CNN
+F 3 "" H 810 5545 50  0001 C CNN
+	1    810  5545
+	0    -1   1    0   
 $EndComp
 $Comp
 L power:GND #PWR010
 U 1 1 5D2BE54C
-P 1295 6415
-F 0 "#PWR010" H 1295 6165 50  0001 C CNN
-F 1 "GND" H 1300 6242 50  0000 C CNN
-F 2 "" H 1295 6415 50  0001 C CNN
-F 3 "" H 1295 6415 50  0001 C CNN
-	1    1295 6415
-	1    0    0    -1  
+P 1175 5845
+F 0 "#PWR010" H 1175 5595 50  0001 C CNN
+F 1 "GND" H 1180 5672 50  0000 C CNN
+F 2 "" H 1175 5845 50  0001 C CNN
+F 3 "" H 1175 5845 50  0001 C CNN
+	1    1175 5845
+	1    0    0    1   
 $EndComp
-NoConn ~ 1795 6115
-NoConn ~ 1295 6115
-NoConn ~ 1295 5915
-NoConn ~ 1795 5915
+NoConn ~ 1295 5645
+NoConn ~ 1795 5445
+NoConn ~ 1795 5645
 $Comp
 L Device:C_Small C1
 U 1 1 5D302823
@@ -749,15 +723,15 @@ $EndComp
 $Comp
 L Device:C_Small C4
 U 1 1 5D349047
-P 1320 7030
-F 0 "C4" H 1412 7076 50  0000 L CNN
-F 1 "100uF" H 1412 6985 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1320 7030 50  0001 C CNN
-F 3 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM31CR60J107KE39L?qs=sGAEpiMZZMvsSlwiRhF8qn%2FMY8sF09EMDof8ZcfiBgehwz2i%2Fojzzg%3D%3D" H 1320 7030 50  0001 C CNN
-F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100UF 6.3V 10% 1206" H 1320 7030 50  0001 C CNN "Description"
-F 5 "GRM31CR60J107KE39L" H 1320 7030 50  0001 C CNN "MPN"
-F 6 "Murata Electronics" H 1320 7030 50  0001 C CNN "Manufacturer"
-	1    1320 7030
+P 1510 6625
+F 0 "C4" H 1602 6671 50  0000 L CNN
+F 1 "100uF" H 1602 6580 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1510 6625 50  0001 C CNN
+F 3 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM31CR60J107KE39L?qs=sGAEpiMZZMvsSlwiRhF8qn%2FMY8sF09EMDof8ZcfiBgehwz2i%2Fojzzg%3D%3D" H 1510 6625 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100UF 6.3V 10% 1206" H 1510 6625 50  0001 C CNN "Description"
+F 5 "GRM31CR60J107KE39L" H 1510 6625 50  0001 C CNN "MPN"
+F 6 "Murata Electronics" H 1510 6625 50  0001 C CNN "Manufacturer"
+	1    1510 6625
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -769,351 +743,115 @@ Connection ~ 8770 1615
 Wire Wire Line
 	9115 1615 8770 1615
 Wire Wire Line
-	1300 4750 1055 4750
+	1280 3540 1035 3540
 Wire Wire Line
-	1800 4750 2045 4750
+	1035 3640 1280 3640
 Wire Wire Line
-	1300 4850 1055 4850
+	1280 3440 1035 3440
 Wire Wire Line
-	1800 4850 2045 4850
+	1780 3440 2025 3440
 Wire Wire Line
-	1800 4950 2045 4950
+	1780 3340 2025 3340
 Wire Wire Line
-	1800 5050 2045 5050
-Text Label 1895 4750 2    50   ~ 0
+	1780 3240 2025 3240
+Text Label 1185 3440 2    50   ~ 0
 D2
-Text Label 1070 4850 0    50   ~ 0
+Text Label 1830 3340 0    50   ~ 0
 D3
-Text Label 1950 4850 2    50   ~ 0
-GND
-Text Label 1895 4950 2    50   ~ 0
+Text Label 1195 3340 2    50   ~ 0
 D4
-Text Label 1895 5050 2    50   ~ 0
+Text Label 1920 3240 2    50   ~ 0
 D5
 Entry Wire Line
-	2045 5050 2145 4950
+	2025 4740 2125 4640
 Entry Wire Line
-	2045 4950 2145 4850
+	2025 4640 2125 4540
 Entry Wire Line
-	2045 4850 2145 4750
+	2025 4540 2125 4440
 Entry Wire Line
-	1055 4850 955  4750
+	2025 4140 2125 4040
 Entry Wire Line
-	2045 4750 2145 4650
+	2025 4440 2125 4340
 Wire Wire Line
-	1055 4250 1300 4250
+	1035 3740 1280 3740
 Entry Wire Line
-	1055 5150 955  5050
+	1035 4840 935  4740
 Entry Wire Line
-	1055 5250 955  5150
+	1035 4940 935  4840
 Wire Wire Line
-	1300 4950 1055 4950
-Text Label 1065 4950 0    50   ~ 0
-GND
+	1280 3340 1035 3340
 Entry Wire Line
-	1055 4950 955  4850
+	1035 4640 935  4540
 Wire Wire Line
-	1300 5050 1055 5050
+	1280 3240 1035 3240
 Wire Wire Line
-	1800 5150 2045 5150
-Text Label 1070 5050 0    50   ~ 0
+	1780 3140 2025 3140
+Text Label 1090 3240 0    50   ~ 0
 D6
-Text Label 1895 5150 2    50   ~ 0
+Text Label 1930 3140 2    50   ~ 0
 D7
 Entry Wire Line
-	2045 5150 2145 5050
+	2025 4840 2125 4740
 Entry Wire Line
-	1055 5050 955  4950
+	1035 4740 935  4640
 Wire Wire Line
-	1300 4650 1055 4650
-Text Label 1070 4650 0    50   ~ 0
+	1780 4140 2025 4140
+Text Label 1090 3540 0    50   ~ 0
 D0
-Text Label 1070 4750 0    50   ~ 0
+Text Label 1840 3440 0    50   ~ 0
 D1
 Entry Wire Line
-	955  4550 1055 4650
+	935  3340 1035 3440
 Entry Wire Line
-	955  4650 1055 4750
+	935  4440 1035 4540
 Wire Wire Line
-	1800 5250 2045 5250
+	1780 3040 2025 3040
 Wire Wire Line
-	1795 6015 2105 6015
+	810  5545 925  5545
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5D23EE7A
-P 2280 6015
-F 0 "#PWR0101" H 2280 5865 50  0001 C CNN
-F 1 "+3.3V" H 2295 6188 50  0000 C CNN
-F 2 "" H 2280 6015 50  0001 C CNN
-F 3 "" H 2280 6015 50  0001 C CNN
-	1    2280 6015
-	0    1    1    0   
+P 2010 5545
+F 0 "#PWR0101" H 2010 5395 50  0001 C CNN
+F 1 "+3.3V" H 2025 5718 50  0000 C CNN
+F 2 "" H 2010 5545 50  0001 C CNN
+F 3 "" H 2010 5545 50  0001 C CNN
+	1    2010 5545
+	0    1    -1   0   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5D245CFE
-P 2105 6015
-F 0 "#FLG0101" H 2105 6090 50  0001 C CNN
-F 1 "PWR_FLAG" H 2105 6188 50  0000 C CNN
-F 2 "" H 2105 6015 50  0001 C CNN
-F 3 "~" H 2105 6015 50  0001 C CNN
-	1    2105 6015
-	1    0    0    -1  
+P 925 5545
+F 0 "#FLG0101" H 925 5620 50  0001 C CNN
+F 1 "PWR_FLAG" H 925 5718 50  0000 C CNN
+F 2 "" H 925 5545 50  0001 C CNN
+F 3 "~" H 925 5545 50  0001 C CNN
+	1    925  5545
+	1    0    0    1   
 $EndComp
-Connection ~ 2105 6015
+Connection ~ 925  5545
 Wire Wire Line
-	2105 6015 2280 6015
+	925  5545 1295 5545
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D2472AD
-P 1795 6315
-F 0 "#FLG0102" H 1795 6390 50  0001 C CNN
-F 1 "PWR_FLAG" H 1795 6488 50  0000 C CNN
-F 2 "" H 1795 6315 50  0001 C CNN
-F 3 "~" H 1795 6315 50  0001 C CNN
-	1    1795 6315
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 5D23D707
-P 3420 1135
-F 0 "R3" V 3485 1135 50  0000 C CNN
-F 1 "360R" V 3350 1135 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3420 1135 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3420 1135 50  0001 C CNN
-F 4 "Thick Film Resistors - SMD 360 ohm 1%" H 3420 1135 50  0001 C CNN "Description"
-F 5 "CR0603-FX-3600ELF" H 3420 1135 50  0001 C CNN "MPN"
-F 6 "Bourns" H 3420 1135 50  0001 C CNN "Manufacturer"
-	1    3420 1135
-	0    -1   -1   0   
+P 1910 5845
+F 0 "#FLG0102" H 1910 5920 50  0001 C CNN
+F 1 "PWR_FLAG" H 1910 6018 50  0000 C CNN
+F 2 "" H 1910 5845 50  0001 C CNN
+F 3 "~" H 1910 5845 50  0001 C CNN
+	1    1910 5845
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3210 1135 3320 1135
-$Comp
-L Device:R_Small R4
-U 1 1 5D250126
-P 3420 1335
-F 0 "R4" V 3480 1340 50  0000 C CNN
-F 1 "360R" V 3340 1330 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3420 1335 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3420 1335 50  0001 C CNN
-F 4 "Thick Film Resistors - SMD 360 ohm 1%" H 3420 1335 50  0001 C CNN "Description"
-F 5 "CR0603-FX-3600ELF" H 3420 1335 50  0001 C CNN "MPN"
-F 6 "Bourns" H 3420 1335 50  0001 C CNN "Manufacturer"
-	1    3420 1335
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3210 1335 3320 1335
-Wire Wire Line
-	1285 2030 1005 2030
-Text Label 1035 2030 0    50   ~ 0
+	1445 2030 1165 2030
+Text Label 1195 2030 0    50   ~ 0
 ROM_CE
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 1 1 5D20B4C5
-P 1570 1335
-F 0 "U3" H 1570 1652 50  0000 C CNN
-F 1 "74LVC04A" H 1570 1561 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 1570 1335 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 1570 1335 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 1570 1335 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 1570 1335 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 1570 1335 50  0001 C CNN "Manufacturer"
-	1    1570 1335
-	1    0    0    -1  
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 2 1 5D20CA3C
-P 2310 1335
-F 0 "U3" H 2310 1652 50  0000 C CNN
-F 1 "74LVC04A" H 2310 1561 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 2310 1335 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 2310 1335 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 2310 1335 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 2310 1335 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 2310 1335 50  0001 C CNN "Manufacturer"
-	2    2310 1335
-	1    0    0    -1  
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 3 1 5D20DB1C
-P 1585 2030
-F 0 "U3" H 1585 2347 50  0000 C CNN
-F 1 "74LVC04A" H 1585 2256 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 1585 2030 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 1585 2030 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 1585 2030 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 1585 2030 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 1585 2030 50  0001 C CNN "Manufacturer"
-	3    1585 2030
-	1    0    0    -1  
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 4 1 5D20F59D
-P 2315 2030
-F 0 "U3" H 2315 2347 50  0000 C CNN
-F 1 "74LVC04A" H 2315 2256 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 2315 2030 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 2315 2030 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 2315 2030 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 2315 2030 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 2315 2030 50  0001 C CNN "Manufacturer"
-	4    2315 2030
-	1    0    0    -1  
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 7 1 5D210F56
-P 7225 1535
-F 0 "U3" H 7455 1581 50  0000 L CNN
-F 1 "74LVC04A" H 7455 1490 50  0000 L CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7225 1535 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 7225 1535 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 7225 1535 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 7225 1535 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 7225 1535 50  0001 C CNN "Manufacturer"
-	7    7225 1535
-	1    0    0    -1  
-$EndComp
-Text Label 1030 1335 0    50   ~ 0
+Text Label 1195 1335 0    50   ~ 0
 RAM_CE
 Wire Wire Line
-	1270 1335 995  1335
-$Comp
-L Device:R_Small R5
-U 1 1 5D2A8BE2
-P 3425 1830
-F 0 "R5" V 3490 1830 50  0000 C CNN
-F 1 "360R" V 3355 1825 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3425 1830 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3425 1830 50  0001 C CNN
-F 4 "Thick Film Resistors - SMD 360 ohm 1%" H 3425 1830 50  0001 C CNN "Description"
-F 5 "CR0603-FX-3600ELF" H 3425 1830 50  0001 C CNN "MPN"
-F 6 "Bourns" H 3425 1830 50  0001 C CNN "Manufacturer"
-	1    3425 1830
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3215 1830 3325 1830
-$Comp
-L power:+3.3V #PWR07
-U 1 1 5D2A8BE9
-P 3565 1235
-F 0 "#PWR07" H 3565 1085 50  0001 C CNN
-F 1 "+3.3V" H 3580 1408 50  0000 C CNN
-F 2 "" H 3565 1235 50  0001 C CNN
-F 3 "" H 3565 1235 50  0001 C CNN
-	1    3565 1235
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 5D2A8BEF
-P 3425 2030
-F 0 "R6" V 3485 2030 50  0000 C CNN
-F 1 "360R" V 3350 2025 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3425 2030 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3425 2030 50  0001 C CNN
-F 4 "Thick Film Resistors - SMD 360 ohm 1%" H 3425 2030 50  0001 C CNN "Description"
-F 5 "CR0603-FX-3600ELF" H 3425 2030 50  0001 C CNN "MPN"
-F 6 "Bourns" H 3425 2030 50  0001 C CNN "Manufacturer"
-	1    3425 2030
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3215 2030 3325 2030
-$Comp
-L power:+3.3V #PWR015
-U 1 1 5D2A8BF6
-P 3580 1930
-F 0 "#PWR015" H 3580 1780 50  0001 C CNN
-F 1 "+3.3V" H 3595 2103 50  0000 C CNN
-F 2 "" H 3580 1930 50  0001 C CNN
-F 3 "" H 3580 1930 50  0001 C CNN
-	1    3580 1930
-	0    1    1    0   
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 6 1 5D2E6583
-P 6355 1720
-F 0 "U3" H 6355 2037 50  0000 C CNN
-F 1 "74LVC04A" H 6355 1946 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 6355 1720 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 6355 1720 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 6355 1720 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 6355 1720 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 6355 1720 50  0001 C CNN "Manufacturer"
-	6    6355 1720
-	1    0    0    -1  
-$EndComp
-$Comp
-L ram_board-rescue:74LVC04ADR-74xx U3
-U 5 1 5D2E7823
-P 6355 1265
-F 0 "U3" H 6355 1582 50  0000 C CNN
-F 1 "74LVC04A" H 6355 1491 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 6355 1265 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/916/74LVC04A-1517201.pdf" H 6355 1265 50  0001 C CNN
-F 4 "Inverters 3.3V HEX INV" H 6355 1265 50  0001 C CNN "Description"
-F 5 "74LVC04APW,112" H 6355 1265 50  0001 C CNN "MPN"
-F 6 "Nexperia" H 6355 1265 50  0001 C CNN "Manufacturer"
-	5    6355 1265
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6055 1265 6055 1720
-Connection ~ 6055 1720
-Wire Wire Line
-	6055 1720 6055 1920
-$Comp
-L power:GND #PWR016
-U 1 1 5D304807
-P 6055 1920
-F 0 "#PWR016" H 6055 1670 50  0001 C CNN
-F 1 "GND" H 6060 1747 50  0000 C CNN
-F 2 "" H 6055 1920 50  0001 C CNN
-F 3 "" H 6055 1920 50  0001 C CNN
-	1    6055 1920
-	1    0    0    -1  
-$EndComp
-NoConn ~ 6655 1265
-NoConn ~ 6655 1720
-$Comp
-L power:+3.3V #PWR014
-U 1 1 5D32EAA6
-P 7225 1035
-F 0 "#PWR014" H 7225 885 50  0001 C CNN
-F 1 "+3.3V" H 7240 1208 50  0000 C CNN
-F 2 "" H 7225 1035 50  0001 C CNN
-F 3 "" H 7225 1035 50  0001 C CNN
-	1    7225 1035
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 5D337623
-P 7225 2035
-F 0 "#PWR017" H 7225 1785 50  0001 C CNN
-F 1 "GND" H 7230 1862 50  0000 C CNN
-F 2 "" H 7225 2035 50  0001 C CNN
-F 3 "" H 7225 2035 50  0001 C CNN
-	1    7225 2035
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	815  720  815  2330
-Wire Notes Line
-	815  2330 3960 2330
-Wire Notes Line
-	3960 2330 3960 700 
-Wire Notes Line
-	3960 700  815  700 
+	1435 1335 1160 1335
 Text Notes 850  810  0    50   ~ 0
 Red if RAM or ROM disabled, Green enabled
 Text Notes 6025 3110 0    50   ~ 0
@@ -1123,21 +861,21 @@ ROM (NOR Flash) 512Kx8
 $Comp
 L Device:C_Small C5
 U 1 1 5D2E2DD6
-P 1740 7030
-F 0 "C5" H 1832 7076 50  0000 L CNN
-F 1 "100nF" H 1832 6985 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1740 7030 50  0001 C CNN
-F 3 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM31CR60J107KE39L?qs=sGAEpiMZZMvsSlwiRhF8qn%2FMY8sF09EMDof8ZcfiBgehwz2i%2Fojzzg%3D%3D" H 1740 7030 50  0001 C CNN
-F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100UF 6.3V 10% 1206" H 1740 7030 50  0001 C CNN "Description"
-F 5 "GRM31CR60J107KE39L" H 1740 7030 50  0001 C CNN "MPN"
-F 6 "Murata Electronics" H 1740 7030 50  0001 C CNN "Manufacturer"
-	1    1740 7030
+P 1930 6625
+F 0 "C5" H 2022 6671 50  0000 L CNN
+F 1 "100nF" H 2022 6580 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1930 6625 50  0001 C CNN
+F 3 "https://www.mouser.com/ProductDetail/Murata-Electronics/GRM31CR60J107KE39L?qs=sGAEpiMZZMvsSlwiRhF8qn%2FMY8sF09EMDof8ZcfiBgehwz2i%2Fojzzg%3D%3D" H 1930 6625 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 100UF 6.3V 10% 1206" H 1930 6625 50  0001 C CNN "Description"
+F 5 "GRM31CR60J107KE39L" H 1930 6625 50  0001 C CNN "MPN"
+F 6 "Murata Electronics" H 1930 6625 50  0001 C CNN "Manufacturer"
+	1    1930 6625
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1320 6930 1535 6930
+	1510 6525 1725 6525
 Wire Wire Line
-	1320 7130 1530 7130
+	1510 6725 1720 6725
 Wire Wire Line
 	8400 1415 8770 1415
 Wire Wire Line
@@ -1145,31 +883,31 @@ Wire Wire Line
 $Comp
 L power:GND #PWR019
 U 1 1 5D3280DF
-P 1530 7130
-F 0 "#PWR019" H 1530 6880 50  0001 C CNN
-F 1 "GND" H 1535 6957 50  0000 C CNN
-F 2 "" H 1530 7130 50  0001 C CNN
-F 3 "" H 1530 7130 50  0001 C CNN
-	1    1530 7130
+P 1720 6725
+F 0 "#PWR019" H 1720 6475 50  0001 C CNN
+F 1 "GND" H 1725 6552 50  0000 C CNN
+F 2 "" H 1720 6725 50  0001 C CNN
+F 3 "" H 1720 6725 50  0001 C CNN
+	1    1720 6725
 	1    0    0    -1  
 $EndComp
-Connection ~ 1530 7130
+Connection ~ 1720 6725
 Wire Wire Line
-	1530 7130 1740 7130
+	1720 6725 1930 6725
 $Comp
 L power:+3.3V #PWR018
 U 1 1 5D339697
-P 1535 6930
-F 0 "#PWR018" H 1535 6780 50  0001 C CNN
-F 1 "+3.3V" H 1550 7103 50  0000 C CNN
-F 2 "" H 1535 6930 50  0001 C CNN
-F 3 "" H 1535 6930 50  0001 C CNN
-	1    1535 6930
+P 1725 6525
+F 0 "#PWR018" H 1725 6375 50  0001 C CNN
+F 1 "+3.3V" H 1740 6698 50  0000 C CNN
+F 2 "" H 1725 6525 50  0001 C CNN
+F 3 "" H 1725 6525 50  0001 C CNN
+	1    1725 6525
 	1    0    0    -1  
 $EndComp
-Connection ~ 1535 6930
+Connection ~ 1725 6525
 Wire Wire Line
-	1535 6930 1740 6930
+	1725 6525 1930 6525
 Wire Wire Line
 	8770 1415 8770 1330
 Wire Wire Line
@@ -1179,32 +917,7 @@ Wire Wire Line
 Wire Wire Line
 	8770 1615 8770 1610
 Wire Wire Line
-	3520 1135 3565 1135
-Wire Wire Line
-	3565 1135 3565 1235
-Wire Wire Line
-	3565 1335 3520 1335
-Connection ~ 3565 1235
-Wire Wire Line
-	3565 1235 3565 1335
-Wire Wire Line
-	3525 1830 3580 1830
-Wire Wire Line
-	3580 1830 3580 1930
-Wire Wire Line
-	3580 2030 3525 2030
-Connection ~ 3580 1930
-Wire Wire Line
-	3580 1930 3580 2030
-Wire Wire Line
-	1870 1335 1935 1335
-Wire Wire Line
-	1935 1135 1935 1335
-Connection ~ 1935 1335
-Wire Wire Line
-	1935 1335 2010 1335
-Wire Wire Line
-	1885 2030 1945 2030
+	1985 1135 1985 1335
 $Comp
 L Device:LED_Dual_ACAC D3
 U 1 1 5D2A8BFC
@@ -1220,14 +933,13 @@ F 6 "ROHM Semiconductor" H 2915 1930 50  0001 C CNN "Manufacturer"
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2615 1830 1945 1830
+	2615 1830 1995 1830
 Wire Wire Line
-	1945 1830 1945 2030
-Connection ~ 1945 2030
+	1995 1830 1995 2030
 Wire Wire Line
-	1945 2030 2015 2030
+	1995 2030 2065 2030
 Wire Wire Line
-	2610 1135 1935 1135
+	2610 1135 1985 1135
 $Comp
 L Device:LED_Dual_ACAC D2
 U 1 1 5D1DD7DE
@@ -1244,8 +956,6 @@ F 6 "ROHM Semiconductor" H 2910 1235 50  0001 C CNN "Manufacturer"
 $EndComp
 Text Notes 3080 1110 0    50   ~ 0
 red
-Text Notes 3085 1320 0    50   ~ 0
-green
 Wire Wire Line
 	8440 5355 8195 5355
 Text Label 8205 5355 0    50   ~ 0
@@ -1255,102 +965,337 @@ Entry Wire Line
 Text Label 7205 5265 0    50   ~ 0
 ROM_WE
 Wire Wire Line
-	1800 4650 2045 4650
-Text Label 1815 4650 0    50   ~ 0
+	1780 3540 2025 3540
+Text Label 1050 3040 0    50   ~ 0
 ROM_WE
 Entry Wire Line
-	2045 4650 2145 4550
+	2025 4340 2125 4240
 Wire Wire Line
-	2045 4250 1800 4250
+	2025 4840 1780 4840
 Wire Wire Line
-	2045 4350 1800 4350
+	2025 4740 1780 4740
 Wire Wire Line
-	2045 4450 1800 4450
+	2025 4640 1780 4640
 Wire Wire Line
-	2045 4550 1800 4550
-Text Label 1970 4250 2    50   ~ 0
-SW3
-Text Label 1970 4350 2    50   ~ 0
-SW2
-Text Label 1970 4450 2    50   ~ 0
-SW1
-Text Label 1970 4550 2    50   ~ 0
-SW0
+	2025 3640 1780 3640
+Text Label 2000 4940 2    50   ~ 0
+SW1_3
+Text Label 2005 4840 2    50   ~ 0
+SW1_2
+Text Label 2005 4740 2    50   ~ 0
+SW1_1
+Text Label 2005 4640 2    50   ~ 0
+SW1_0
 Entry Wire Line
-	2045 4550 2145 4450
+	2025 4240 2125 4140
 Entry Wire Line
-	2045 4450 2145 4350
+	2025 3340 2125 3240
 Entry Wire Line
-	2045 4350 2145 4250
+	2025 3240 2125 3140
 Entry Wire Line
-	2045 4250 2145 4150
+	2025 3140 2125 3040
 $Comp
-L Switch:SW_DIP_x04 SW1
+L Switch:SW_DIP_x06 SW1
 U 1 1 5DF52DEA
-P 3530 4370
-F 0 "SW1" H 3530 4837 50  0000 C CNN
-F 1 "SW_DIP_x04" H 3530 4746 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_KingTek_DSHP04TS_W7.62mm_P1.27mm" H 3530 4370 50  0001 C CNN
-F 3 "~" H 3530 4370 50  0001 C CNN
-	1    3530 4370
+P 3530 4470
+F 0 "SW1" H 3530 4937 50  0000 C CNN
+F 1 "Config" H 3530 4846 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx06_Slide_KingTek_DSHP06TS_W7.62mm_P1.27mm" H 3530 4470 50  0001 C CNN
+F 3 "~" H 3530 4470 50  0001 C CNN
+	1    3530 4470
+	1    0    0    -1  
+$EndComp
+Text Label 4400 4470 2    50   ~ 0
+SW1_3
+Text Label 4400 4370 2    50   ~ 0
+SW1_2
+Text Label 4400 4270 2    50   ~ 0
+SW1_1
+Text Label 4400 4170 2    50   ~ 0
+SW1_0
+Entry Wire Line
+	4475 4470 4575 4370
+Entry Wire Line
+	4475 4370 4575 4270
+Entry Wire Line
+	4475 4270 4575 4170
+Entry Wire Line
+	4475 4170 4575 4070
+$Comp
+L power:GND #PWR02
+U 1 1 5DFBF0BF
+P 3230 4860
+F 0 "#PWR02" H 3230 4610 50  0001 C CNN
+F 1 "GND" H 3235 4687 50  0000 C CNN
+F 2 "" H 3230 4860 50  0001 C CNN
+F 3 "" H 3230 4860 50  0001 C CNN
+	1    3230 4860
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4075 4470 3830 4470
+	3875 3555 3875 3490
 Wire Wire Line
-	4075 4370 3830 4370
+	4175 3490 4175 3555
 Wire Wire Line
-	4075 4270 3830 4270
-Text Label 4000 4470 2    50   ~ 0
-SW3
-Text Label 4000 4370 2    50   ~ 0
-SW2
-Text Label 4000 4270 2    50   ~ 0
-SW1
-Text Label 4000 4170 2    50   ~ 0
-SW0
-Entry Wire Line
-	4075 4470 4175 4370
-Entry Wire Line
-	4075 4370 4175 4270
-Entry Wire Line
-	4075 4270 4175 4170
-Entry Wire Line
-	4075 4170 4175 4070
+	3975 3555 3975 3490
 Wire Wire Line
-	4075 4170 3830 4170
+	3875 3490 3975 3490
+Connection ~ 3975 3490
+Wire Wire Line
+	3975 3490 4020 3490
+Wire Wire Line
+	4075 3555 4075 3490
+Connection ~ 4075 3490
+Wire Wire Line
+	4075 3490 4175 3490
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5D3D2CF9
+P 4020 3405
+F 0 "#PWR01" H 4020 3255 50  0001 C CNN
+F 1 "+3.3V" H 4035 3578 50  0000 C CNN
+F 2 "" H 4020 3405 50  0001 C CNN
+F 3 "" H 4020 3405 50  0001 C CNN
+	1    4020 3405
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4020 3405 4020 3490
+Connection ~ 4020 3490
+Wire Wire Line
+	4020 3490 4075 3490
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5D40BED1
+P 4075 3755
+F 0 "RN1" H 4263 3801 50  0000 L CNN
+F 1 "1K" H 4263 3710 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x1206" V 4350 3755 50  0001 C CNN
+F 3 "~" H 4075 3755 50  0001 C CNN
+	1    4075 3755
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3830 4270 3975 4270
+Wire Wire Line
+	3830 4370 4075 4370
+Wire Wire Line
+	3830 4470 4175 4470
+Wire Wire Line
+	3830 4170 3875 4170
+Wire Wire Line
+	3875 3955 3875 4170
+Connection ~ 3875 4170
+Wire Wire Line
+	3875 4170 4475 4170
+Wire Wire Line
+	3975 3955 3975 4270
+Connection ~ 3975 4270
+Wire Wire Line
+	3975 4270 4475 4270
+Wire Wire Line
+	4075 3955 4075 4370
+Connection ~ 4075 4370
+Wire Wire Line
+	4075 4370 4475 4370
+Wire Wire Line
+	4175 3955 4175 4470
+Connection ~ 4175 4470
+Wire Wire Line
+	4175 4470 4475 4470
+Wire Wire Line
+	1295 5845 1295 5745
+NoConn ~ 1295 5445
+Wire Wire Line
+	1295 5845 1175 5845
+Connection ~ 1295 5845
+Wire Wire Line
+	1795 5845 1795 5745
+$Comp
+L power:GND #PWR0102
+U 1 1 5D6A093A
+P 1910 5845
+F 0 "#PWR0102" H 1910 5595 50  0001 C CNN
+F 1 "GND" H 1915 5672 50  0000 C CNN
+F 2 "" H 1910 5845 50  0001 C CNN
+F 3 "" H 1910 5845 50  0001 C CNN
+	1    1910 5845
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1790 5845 1795 5845
+Connection ~ 1795 5845
+Wire Wire Line
+	1795 5845 1910 5845
+Wire Wire Line
+	1795 5545 1945 5545
+Connection ~ 1910 5845
+Text Label 1265 4840 2    50   ~ 0
+SW1_5
+Text Label 1270 4740 2    50   ~ 0
+SW1_4
+Wire Notes Line
+	760  665  4440 665 
+Wire Notes Line
+	4440 665  4440 2315
+Wire Notes Line
+	4440 2315 760  2315
+Wire Notes Line
+	760  2315 760  665 
+$Comp
+L 74xGxx:74LVC2G04 U4
+U 1 1 5DD0AE50
+P 1735 1335
+F 0 "U4" H 1710 1602 50  0000 C CNN
+F 1 "74LVC2G04" H 1710 1511 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 1735 1335 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1735 1335 50  0001 C CNN
+	1    1735 1335
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC2G04 U4
+U 2 1 5DD0C09C
+P 2360 1335
+F 0 "U4" H 2335 1602 50  0000 C CNN
+F 1 "74LVC2G04" H 2335 1511 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 2360 1335 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2360 1335 50  0001 C CNN
+	2    2360 1335
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC2G04 U5
+U 1 1 5DDB6103
+P 1745 2030
+F 0 "U5" H 1720 2297 50  0000 C CNN
+F 1 "74LVC2G04" H 1720 2206 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 1745 2030 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1745 2030 50  0001 C CNN
+	1    1745 2030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1985 1335 2060 1335
+$Comp
+L 74xGxx:74LVC2G04 U5
+U 2 1 5DDFBFB9
+P 2365 2030
+F 0 "U5" H 2340 2297 50  0000 C CNN
+F 1 "74LVC2G04" H 2340 2206 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 2365 2030 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2365 2030 50  0001 C CNN
+	2    2365 2030
+	1    0    0    -1  
+$EndComp
+Connection ~ 1995 2030
+$Comp
+L Device:R_Small R1
+U 1 1 5DED1A12
+P 3550 1235
+F 0 "R1" V 3746 1235 50  0000 C CNN
+F 1 "360R" V 3655 1235 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3550 1235 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3550 1235 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3550 1235 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3550 1235 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3550 1235 50  0001 C CNN "Manufacturer"
+	1    3550 1235
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR07
+U 1 1 5DED1A18
+P 3650 1235
+F 0 "#PWR07" H 3650 1085 50  0001 C CNN
+F 1 "+3.3V" H 3665 1408 50  0000 C CNN
+F 2 "" H 3650 1235 50  0001 C CNN
+F 3 "" H 3650 1235 50  0001 C CNN
+	1    3650 1235
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3210 1135 3210 1235
+Wire Wire Line
+	3210 1235 3450 1235
+Connection ~ 3210 1235
+Wire Wire Line
+	3210 1235 3210 1335
+Wire Wire Line
+	3215 1830 3215 1935
+$Comp
+L Device:R_Small R3
+U 1 1 5DF1B9D7
+P 3555 1935
+F 0 "R3" V 3751 1935 50  0000 C CNN
+F 1 "360R" V 3660 1935 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3555 1935 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3555 1935 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3555 1935 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3555 1935 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3555 1935 50  0001 C CNN "Manufacturer"
+	1    3555 1935
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR015
+U 1 1 5DF1B9DD
+P 3655 1935
+F 0 "#PWR015" H 3655 1785 50  0001 C CNN
+F 1 "+3.3V" H 3670 2108 50  0000 C CNN
+F 2 "" H 3655 1935 50  0001 C CNN
+F 3 "" H 3655 1935 50  0001 C CNN
+	1    3655 1935
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3215 1935 3455 1935
+Connection ~ 3215 1935
+Wire Wire Line
+	3215 1935 3215 2030
+$Comp
+L power:VCC #PWR0103
+U 1 1 5DF61EF3
+P 1945 5545
+F 0 "#PWR0103" H 1945 5395 50  0001 C CNN
+F 1 "VCC" H 1962 5718 50  0000 C CNN
+F 2 "" H 1945 5545 50  0001 C CNN
+F 3 "" H 1945 5545 50  0001 C CNN
+	1    1945 5545
+	1    0    0    -1  
+$EndComp
+Connection ~ 1945 5545
+Wire Wire Line
+	1945 5545 2010 5545
+Text Label 1940 4140 2    50   ~ 0
+A9
 Wire Wire Line
 	3230 4170 3230 4270
-Connection ~ 3230 4270
 Wire Wire Line
 	3230 4270 3230 4370
+Connection ~ 3230 4270
 Connection ~ 3230 4370
 Wire Wire Line
 	3230 4370 3230 4470
 Connection ~ 3230 4470
 Wire Wire Line
-	3230 4470 3230 4665
-$Comp
-L power:GND #PWR?
-U 1 1 5DFBF0BF
-P 3230 4665
-F 0 "#PWR?" H 3230 4415 50  0001 C CNN
-F 1 "GND" H 3235 4492 50  0000 C CNN
-F 2 "" H 3230 4665 50  0001 C CNN
-F 3 "" H 3230 4665 50  0001 C CNN
-	1    3230 4665
-	1    0    0    -1  
-$EndComp
+	3230 4470 3230 4570
+Connection ~ 3230 4570
+Wire Wire Line
+	3230 4570 3230 4670
+Connection ~ 3230 4670
+Wire Wire Line
+	3230 4670 3230 4860
 Wire Bus Line
 	6915 3200 6915 4035
 Wire Bus Line
 	9985 3225 9985 4060
 Wire Bus Line
-	4175 4035 4175 4560
+	4575 4035 4575 4560
 Wire Bus Line
-	955  3220 955  5250
+	935  2910 935  4940
 Wire Bus Line
-	2145 3220 2145 5250
+	2125 2910 2125 4940
 Wire Bus Line
 	5025 3200 5025 5525
 Wire Bus Line
