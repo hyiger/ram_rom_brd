@@ -853,7 +853,7 @@ RAM_CE
 Wire Wire Line
 	1435 1335 1160 1335
 Text Notes 850  810  0    50   ~ 0
-Red if RAM or ROM disabled, Green enabled
+Red if RAM or ROM disabled, Green enabled\nTODO: Convert to a tristate driver
 Text Notes 6025 3110 0    50   ~ 0
 RAM 512Kx8
 Text Notes 9120 3165 0    50   ~ 0
@@ -1005,22 +1005,14 @@ F 3 "~" H 3530 4470 50  0001 C CNN
 	1    3530 4470
 	1    0    0    -1  
 $EndComp
-Text Label 4400 4470 2    50   ~ 0
+Text Label 4670 4470 2    50   ~ 0
 SW1_3
-Text Label 4400 4370 2    50   ~ 0
+Text Label 4670 4370 2    50   ~ 0
 SW1_2
-Text Label 4400 4270 2    50   ~ 0
+Text Label 4670 4270 2    50   ~ 0
 SW1_1
-Text Label 4400 4170 2    50   ~ 0
+Text Label 4665 4170 2    50   ~ 0
 SW1_0
-Entry Wire Line
-	4475 4470 4575 4370
-Entry Wire Line
-	4475 4370 4575 4270
-Entry Wire Line
-	4475 4270 4575 4170
-Entry Wire Line
-	4475 4170 4575 4070
 $Comp
 L power:GND #PWR02
 U 1 1 5DFBF0BF
@@ -1032,51 +1024,17 @@ F 3 "" H 3230 4860 50  0001 C CNN
 	1    3230 4860
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3875 3555 3875 3490
-Wire Wire Line
-	4175 3490 4175 3555
-Wire Wire Line
-	3975 3555 3975 3490
-Wire Wire Line
-	3875 3490 3975 3490
-Connection ~ 3975 3490
-Wire Wire Line
-	3975 3490 4020 3490
-Wire Wire Line
-	4075 3555 4075 3490
-Connection ~ 4075 3490
-Wire Wire Line
-	4075 3490 4175 3490
 $Comp
 L power:+3.3V #PWR01
 U 1 1 5D3D2CF9
-P 4020 3405
-F 0 "#PWR01" H 4020 3255 50  0001 C CNN
-F 1 "+3.3V" H 4035 3578 50  0000 C CNN
-F 2 "" H 4020 3405 50  0001 C CNN
-F 3 "" H 4020 3405 50  0001 C CNN
-	1    4020 3405
+P 3875 3555
+F 0 "#PWR01" H 3875 3405 50  0001 C CNN
+F 1 "+3.3V" H 3890 3728 50  0000 C CNN
+F 2 "" H 3875 3555 50  0001 C CNN
+F 3 "" H 3875 3555 50  0001 C CNN
+	1    3875 3555
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4020 3405 4020 3490
-Connection ~ 4020 3490
-Wire Wire Line
-	4020 3490 4075 3490
-$Comp
-L Device:R_Pack04 RN1
-U 1 1 5D40BED1
-P 4075 3755
-F 0 "RN1" H 4263 3801 50  0000 L CNN
-F 1 "1K" H 4263 3710 50  0000 L CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x1206" V 4350 3755 50  0001 C CNN
-F 3 "~" H 4075 3755 50  0001 C CNN
-	1    4075 3755
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3830 4270 3975 4270
 Wire Wire Line
 	3830 4370 4075 4370
 Wire Wire Line
@@ -1085,24 +1043,12 @@ Wire Wire Line
 	3830 4170 3875 4170
 Wire Wire Line
 	3875 3955 3875 4170
-Connection ~ 3875 4170
-Wire Wire Line
-	3875 4170 4475 4170
 Wire Wire Line
 	3975 3955 3975 4270
-Connection ~ 3975 4270
-Wire Wire Line
-	3975 4270 4475 4270
 Wire Wire Line
 	4075 3955 4075 4370
-Connection ~ 4075 4370
-Wire Wire Line
-	4075 4370 4475 4370
 Wire Wire Line
 	4175 3955 4175 4470
-Connection ~ 4175 4470
-Wire Wire Line
-	4175 4470 4475 4470
 Wire Wire Line
 	1295 5845 1295 5745
 NoConn ~ 1295 5445
@@ -1286,12 +1232,155 @@ Wire Wire Line
 Connection ~ 3230 4670
 Wire Wire Line
 	3230 4670 3230 4860
+Text Label 4670 4670 2    50   ~ 0
+SW1_5
+Text Label 4670 4570 2    50   ~ 0
+SW1_4
+Wire Wire Line
+	4275 3955 4275 4570
+Wire Wire Line
+	4375 3955 4375 4670
+$Comp
+L Device:R_Network06 RN1
+U 1 1 5D2A07A4
+P 4175 3755
+F 0 "RN1" H 4463 3801 50  0000 L CNN
+F 1 "R_Network06" H 4463 3710 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_8x0602" V 4550 3755 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4175 3755 50  0001 C CNN
+	1    4175 3755
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	4685 4570 4785 4470
+Entry Wire Line
+	4685 4670 4785 4570
+Wire Wire Line
+	3830 4670 4375 4670
+Wire Wire Line
+	3830 4570 4275 4570
+Wire Wire Line
+	4175 4470 4685 4470
+Wire Wire Line
+	4075 4370 4685 4370
+Entry Wire Line
+	4685 4170 4785 4070
+Entry Wire Line
+	4685 4270 4785 4170
+Entry Wire Line
+	4685 4370 4785 4270
+Entry Wire Line
+	4685 4470 4785 4370
+Wire Wire Line
+	3875 4170 4685 4170
+Connection ~ 3875 4170
+Wire Wire Line
+	3830 4270 3975 4270
+Wire Wire Line
+	3975 4270 4685 4270
+Connection ~ 3975 4270
+Connection ~ 4075 4370
+Connection ~ 4175 4470
+Connection ~ 4275 4570
+Wire Wire Line
+	4275 4570 4685 4570
+Connection ~ 4375 4670
+Wire Wire Line
+	4375 4670 4685 4670
+$Comp
+L Device:LED_Dual_ACAC D1
+U 1 1 5D40BBB0
+P 6020 1625
+F 0 "D1" H 6020 1278 50  0000 C CNN
+F 1 "LED" H 6020 1369 50  0000 C CNN
+F 2 "LED_SMD:LED_2C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6050 1625 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/sml-d22-e-1508165.pdf" H 6050 1625 50  0001 C CNN
+F 4 "Standard LEDs - SMD Red/YelGrn 620/570nm 16/10mcd 65/67mW 5mA" H 6020 1625 50  0001 C CNN "Description"
+F 5 "SML-D22MUWT86" H 6020 1625 50  0001 C CNN "MPN"
+F 6 "ROHM Semiconductor" H 6020 1625 50  0001 C CNN "Manufacturer"
+	1    6020 1625
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5D40BBBA
+P 6655 1835
+F 0 "R4" V 6851 1835 50  0000 C CNN
+F 1 "360R" V 6760 1835 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6655 1835 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 6655 1835 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 6655 1835 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 6655 1835 50  0001 C CNN "MPN"
+F 6 "Bourns" H 6655 1835 50  0001 C CNN "Manufacturer"
+	1    6655 1835
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6375 1835 6555 1835
+Wire Wire Line
+	5720 1525 5720 1455
+Wire Wire Line
+	5720 1350 6455 1350
+Wire Wire Line
+	6455 1350 6455 1725
+Wire Wire Line
+	6455 1725 6320 1725
+Wire Wire Line
+	6320 1525 6375 1525
+Wire Wire Line
+	6375 1525 6375 1835
+Wire Wire Line
+	6375 1890 5720 1890
+Wire Wire Line
+	5720 1890 5720 1725
+Connection ~ 6375 1835
+Wire Wire Line
+	6375 1835 6375 1890
+$Comp
+L 74xGxx:74LVC2G04 U3
+U 1 1 5D486330
+P 6105 1040
+F 0 "U3" H 6080 1307 50  0000 C CNN
+F 1 "74LVC2G04" H 6080 1216 50  0000 C CNN
+F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 6105 1040 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 6105 1040 50  0001 C CNN
+	1    6105 1040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6755 1040 6355 1040
+Wire Wire Line
+	5805 1040 5570 1040
+Wire Wire Line
+	5570 1040 5570 1455
+Wire Wire Line
+	5570 1455 5720 1455
+Connection ~ 5720 1455
+Wire Wire Line
+	5720 1455 5720 1350
+Wire Wire Line
+	5570 1455 5260 1455
+Connection ~ 5570 1455
+Wire Wire Line
+	6755 1040 6755 1835
+Text Label 1080 4640 0    50   ~ 0
+LED1
+Text Label 5320 1455 0    50   ~ 0
+LED1
+Wire Notes Line
+	5025 665  7230 665 
+Wire Notes Line
+	7230 665  7230 2330
+Wire Notes Line
+	7230 2330 5035 2330
+Wire Notes Line
+	5035 2330 5035 665 
 Wire Bus Line
 	6915 3200 6915 4035
 Wire Bus Line
 	9985 3225 9985 4060
 Wire Bus Line
-	4575 4035 4575 4560
+	4785 4035 4785 4595
 Wire Bus Line
 	935  2910 935  4940
 Wire Bus Line
@@ -1300,4 +1389,6 @@ Wire Bus Line
 	5025 3200 5025 5525
 Wire Bus Line
 	8095 3225 8095 5655
+Text Notes 5160 2175 0    50   ~ 0
+Tri-stated LED driver
 $EndSCHEMATC
