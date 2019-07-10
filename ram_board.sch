@@ -589,7 +589,7 @@ L Device:R_Small R2
 U 1 1 5D24A1BE
 P 7090 5065
 F 0 "R2" V 7286 5065 50  0000 C CNN
-F 1 "1K" V 7195 5065 50  0000 C CNN
+F 1 "10K" V 7195 5065 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7090 5065 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 7090 5065 50  0001 C CNN
 F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 7090 5065 50  0001 C CNN "Description"
@@ -659,65 +659,65 @@ NoConn ~ 1795 5645
 $Comp
 L Device:C_Small C1
 U 1 1 5D302823
-P 8400 1515
-F 0 "C1" H 8492 1561 50  0000 L CNN
-F 1 "100nF" H 8492 1470 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8400 1515 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 8400 1515 50  0001 C CNN
-F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 8400 1515 50  0001 C CNN "Description"
-F 5 "CC0603JRX7R9BB104" H 8400 1515 50  0001 C CNN "MPN"
-F 6 "Yageo" H 8400 1515 50  0001 C CNN "Manufacturer"
-	1    8400 1515
+P 5370 1515
+F 0 "C1" H 5462 1561 50  0000 L CNN
+F 1 "100nF" H 5462 1470 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5370 1515 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 5370 1515 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 5370 1515 50  0001 C CNN "Description"
+F 5 "CC0603JRX7R9BB104" H 5370 1515 50  0001 C CNN "MPN"
+F 6 "Yageo" H 5370 1515 50  0001 C CNN "Manufacturer"
+	1    5370 1515
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C2
 U 1 1 5D3034D5
-P 8770 1515
-F 0 "C2" H 8862 1561 50  0000 L CNN
-F 1 "100nF" H 8862 1470 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8770 1515 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 8770 1515 50  0001 C CNN
-F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 8770 1515 50  0001 C CNN "Description"
-F 5 "CC0603JRX7R9BB104" H 8770 1515 50  0001 C CNN "MPN"
-F 6 "Yageo" H 8770 1515 50  0001 C CNN "Manufacturer"
-	1    8770 1515
+P 5740 1515
+F 0 "C2" H 5832 1561 50  0000 L CNN
+F 1 "100nF" H 5832 1470 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5740 1515 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 5740 1515 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 5740 1515 50  0001 C CNN "Description"
+F 5 "CC0603JRX7R9BB104" H 5740 1515 50  0001 C CNN "MPN"
+F 6 "Yageo" H 5740 1515 50  0001 C CNN "Manufacturer"
+	1    5740 1515
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR012
 U 1 1 5D327C39
-P 8770 1330
-F 0 "#PWR012" H 8770 1180 50  0001 C CNN
-F 1 "+3.3V" H 8785 1503 50  0000 C CNN
-F 2 "" H 8770 1330 50  0001 C CNN
-F 3 "" H 8770 1330 50  0001 C CNN
-	1    8770 1330
+P 5920 1330
+F 0 "#PWR012" H 5920 1180 50  0001 C CNN
+F 1 "+3.3V" H 5935 1503 50  0000 C CNN
+F 2 "" H 5920 1330 50  0001 C CNN
+F 3 "" H 5920 1330 50  0001 C CNN
+	1    5920 1330
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 5D334435
-P 8770 1700
-F 0 "#PWR013" H 8770 1450 50  0001 C CNN
-F 1 "GND" H 8775 1527 50  0000 C CNN
-F 2 "" H 8770 1700 50  0001 C CNN
-F 3 "" H 8770 1700 50  0001 C CNN
-	1    8770 1700
+P 5915 1700
+F 0 "#PWR013" H 5915 1450 50  0001 C CNN
+F 1 "GND" H 5920 1527 50  0000 C CNN
+F 2 "" H 5915 1700 50  0001 C CNN
+F 3 "" H 5915 1700 50  0001 C CNN
+	1    5915 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C3
 U 1 1 5D342ECC
-P 9115 1515
-F 0 "C3" H 9207 1561 50  0000 L CNN
-F 1 "100nF" H 9207 1470 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9115 1515 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 9115 1515 50  0001 C CNN
-F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 9115 1515 50  0001 C CNN "Description"
-F 5 "CC0603JRX7R9BB104" H 9115 1515 50  0001 C CNN "MPN"
-F 6 "Yageo" H 9115 1515 50  0001 C CNN "Manufacturer"
-	1    9115 1515
+P 6085 1515
+F 0 "C3" H 6177 1561 50  0000 L CNN
+F 1 "100nF" H 6177 1470 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6085 1515 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 6085 1515 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 6085 1515 50  0001 C CNN "Description"
+F 5 "CC0603JRX7R9BB104" H 6085 1515 50  0001 C CNN "MPN"
+F 6 "Yageo" H 6085 1515 50  0001 C CNN "Manufacturer"
+	1    6085 1515
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -735,13 +735,13 @@ F 6 "Murata Electronics" H 1510 6625 50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8770 1415 9115 1415
-Connection ~ 8770 1415
+	5740 1415 5920 1415
+Connection ~ 5740 1415
 Wire Wire Line
-	8770 1615 8770 1620
-Connection ~ 8770 1615
+	5740 1615 5740 1620
+Connection ~ 5740 1615
 Wire Wire Line
-	9115 1615 8770 1615
+	6085 1615 5915 1615
 Wire Wire Line
 	1280 3540 1035 3540
 Wire Wire Line
@@ -756,7 +756,7 @@ Wire Wire Line
 	1780 3240 2025 3240
 Text Label 1185 3440 2    50   ~ 0
 D2
-Text Label 1830 3340 0    50   ~ 0
+Text Label 1820 3340 0    50   ~ 0
 D3
 Text Label 1195 3340 2    50   ~ 0
 D4
@@ -788,7 +788,7 @@ Wire Wire Line
 	1780 3140 2025 3140
 Text Label 1090 3240 0    50   ~ 0
 D6
-Text Label 1930 3140 2    50   ~ 0
+Text Label 1920 3140 2    50   ~ 0
 D7
 Entry Wire Line
 	2025 4840 2125 4740
@@ -798,7 +798,7 @@ Wire Wire Line
 	1780 4140 2025 4140
 Text Label 1090 3540 0    50   ~ 0
 D0
-Text Label 1840 3440 0    50   ~ 0
+Text Label 1825 3440 0    50   ~ 0
 D1
 Entry Wire Line
 	935  3340 1035 3440
@@ -844,8 +844,6 @@ F 3 "~" H 1910 5845 50  0001 C CNN
 	1    1910 5845
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	1445 2030 1165 2030
 Text Label 1195 2030 0    50   ~ 0
 ROM_CE
 Text Label 1195 1335 0    50   ~ 0
@@ -853,7 +851,7 @@ RAM_CE
 Wire Wire Line
 	1435 1335 1160 1335
 Text Notes 850  810  0    50   ~ 0
-Red if RAM or ROM disabled, Green enabled\nTODO: Convert to a tristate driver
+Red if RAM or ROM disabled, Green enabled, Off RAM/ROM not connected\n
 Text Notes 6025 3110 0    50   ~ 0
 RAM 512Kx8
 Text Notes 9120 3165 0    50   ~ 0
@@ -877,9 +875,9 @@ Wire Wire Line
 Wire Wire Line
 	1510 6725 1720 6725
 Wire Wire Line
-	8400 1415 8770 1415
+	5370 1415 5740 1415
 Wire Wire Line
-	8400 1615 8770 1615
+	5370 1615 5740 1615
 $Comp
 L power:GND #PWR019
 U 1 1 5D3280DF
@@ -909,15 +907,13 @@ Connection ~ 1725 6525
 Wire Wire Line
 	1725 6525 1930 6525
 Wire Wire Line
-	8770 1415 8770 1330
+	5920 1415 5920 1330
 Wire Wire Line
-	8770 1700 8770 1615
+	5915 1700 5915 1615
 Wire Wire Line
-	8770 1610 8765 1610
+	5740 1610 5735 1610
 Wire Wire Line
-	8770 1615 8770 1610
-Wire Wire Line
-	1985 1135 1985 1335
+	5740 1615 5740 1610
 $Comp
 L Device:LED_Dual_ACAC D3
 U 1 1 5D2A8BFC
@@ -933,13 +929,7 @@ F 6 "ROHM Semiconductor" H 2915 1930 50  0001 C CNN "Manufacturer"
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2615 1830 1995 1830
-Wire Wire Line
-	1995 1830 1995 2030
-Wire Wire Line
 	1995 2030 2065 2030
-Wire Wire Line
-	2610 1135 1985 1135
 $Comp
 L Device:LED_Dual_ACAC D2
 U 1 1 5D1DD7DE
@@ -1027,12 +1017,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR01
 U 1 1 5D3D2CF9
-P 3875 3555
-F 0 "#PWR01" H 3875 3405 50  0001 C CNN
-F 1 "+3.3V" H 3890 3728 50  0000 C CNN
-F 2 "" H 3875 3555 50  0001 C CNN
-F 3 "" H 3875 3555 50  0001 C CNN
-	1    3875 3555
+P 4130 3595
+F 0 "#PWR01" H 4130 3445 50  0001 C CNN
+F 1 "+3.3V" H 4145 3768 50  0000 C CNN
+F 2 "" H 4130 3595 50  0001 C CNN
+F 3 "" H 4130 3595 50  0001 C CNN
+	1    4130 3595
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1088,53 +1078,8 @@ Wire Notes Line
 	4440 2315 760  2315
 Wire Notes Line
 	760  2315 760  665 
-$Comp
-L 74xGxx:74LVC2G04 U4
-U 1 1 5DD0AE50
-P 1735 1335
-F 0 "U4" H 1710 1602 50  0000 C CNN
-F 1 "74LVC2G04" H 1710 1511 50  0000 C CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 1735 1335 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1735 1335 50  0001 C CNN
-	1    1735 1335
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xGxx:74LVC2G04 U4
-U 2 1 5DD0C09C
-P 2360 1335
-F 0 "U4" H 2335 1602 50  0000 C CNN
-F 1 "74LVC2G04" H 2335 1511 50  0000 C CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 2360 1335 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2360 1335 50  0001 C CNN
-	2    2360 1335
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xGxx:74LVC2G04 U5
-U 1 1 5DDB6103
-P 1745 2030
-F 0 "U5" H 1720 2297 50  0000 C CNN
-F 1 "74LVC2G04" H 1720 2206 50  0000 C CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 1745 2030 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1745 2030 50  0001 C CNN
-	1    1745 2030
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1985 1335 2060 1335
-$Comp
-L 74xGxx:74LVC2G04 U5
-U 2 1 5DDFBFB9
-P 2365 2030
-F 0 "U5" H 2340 2297 50  0000 C CNN
-F 1 "74LVC2G04" H 2340 2206 50  0000 C CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 2365 2030 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2365 2030 50  0001 C CNN
-	2    2365 2030
-	1    0    0    -1  
-$EndComp
-Connection ~ 1995 2030
 $Comp
 L Device:R_Small R1
 U 1 1 5DED1A12
@@ -1213,7 +1158,7 @@ $EndComp
 Connection ~ 1945 5545
 Wire Wire Line
 	1945 5545 2010 5545
-Text Label 1940 4140 2    50   ~ 0
+Text Label 1895 4140 2    50   ~ 0
 A9
 Wire Wire Line
 	3230 4170 3230 4270
@@ -1240,17 +1185,6 @@ Wire Wire Line
 	4275 3955 4275 4570
 Wire Wire Line
 	4375 3955 4375 4670
-$Comp
-L Device:R_Network06 RN1
-U 1 1 5D2A07A4
-P 4175 3755
-F 0 "RN1" H 4463 3801 50  0000 L CNN
-F 1 "R_Network06" H 4463 3710 50  0000 L CNN
-F 2 "Resistor_SMD:R_Array_Convex_8x0602" V 4550 3755 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4175 3755 50  0001 C CNN
-	1    4175 3755
-	1    0    0    -1  
-$EndComp
 Entry Wire Line
 	4685 4570 4785 4470
 Entry Wire Line
@@ -1288,93 +1222,232 @@ Connection ~ 4375 4670
 Wire Wire Line
 	4375 4670 4685 4670
 $Comp
-L Device:LED_Dual_ACAC D1
-U 1 1 5D40BBB0
-P 6020 1625
-F 0 "D1" H 6020 1278 50  0000 C CNN
-F 1 "LED" H 6020 1369 50  0000 C CNN
-F 2 "LED_SMD:LED_2C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6050 1625 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/348/sml-d22-e-1508165.pdf" H 6050 1625 50  0001 C CNN
-F 4 "Standard LEDs - SMD Red/YelGrn 620/570nm 16/10mcd 65/67mW 5mA" H 6020 1625 50  0001 C CNN "Description"
-F 5 "SML-D22MUWT86" H 6020 1625 50  0001 C CNN "MPN"
-F 6 "ROHM Semiconductor" H 6020 1625 50  0001 C CNN "Manufacturer"
-	1    6020 1625
-	-1   0    0    -1  
+L 74xGxx:74LVC2G240 U4
+U 2 1 5D2805F5
+P 2365 2030
+F 0 "U4" H 2340 1855 50  0000 C CNN
+F 1 "74LVC2G240" H 2340 1764 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 2365 2030 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2365 2030 50  0001 C CNN
+	2    2365 2030
+	1    0    0    -1  
 $EndComp
+Connection ~ 1995 2030
 $Comp
-L Device:R_Small R4
-U 1 1 5D40BBBA
-P 6655 1835
-F 0 "R4" V 6851 1835 50  0000 C CNN
-F 1 "360R" V 6760 1835 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6655 1835 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 6655 1835 50  0001 C CNN
-F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 6655 1835 50  0001 C CNN "Description"
-F 5 "CR0603-FX-1002ELF" H 6655 1835 50  0001 C CNN "MPN"
-F 6 "Bourns" H 6655 1835 50  0001 C CNN "Manufacturer"
-	1    6655 1835
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6375 1835 6555 1835
-Wire Wire Line
-	5720 1525 5720 1455
-Wire Wire Line
-	5720 1350 6455 1350
-Wire Wire Line
-	6455 1350 6455 1725
-Wire Wire Line
-	6455 1725 6320 1725
-Wire Wire Line
-	6320 1525 6375 1525
-Wire Wire Line
-	6375 1525 6375 1835
-Wire Wire Line
-	6375 1890 5720 1890
-Wire Wire Line
-	5720 1890 5720 1725
-Connection ~ 6375 1835
-Wire Wire Line
-	6375 1835 6375 1890
-$Comp
-L 74xGxx:74LVC2G04 U3
-U 1 1 5D486330
-P 6105 1040
-F 0 "U3" H 6080 1307 50  0000 C CNN
-F 1 "74LVC2G04" H 6080 1216 50  0000 C CNN
-F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 6105 1040 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 6105 1040 50  0001 C CNN
-	1    6105 1040
+L 74xGxx:74LVC2G240 U4
+U 1 1 5D270545
+P 1745 2030
+F 0 "U4" H 1720 1855 50  0000 C CNN
+F 1 "74LVC2G240" H 1720 1764 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 1745 2030 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1745 2030 50  0001 C CNN
+	1    1745 2030
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6755 1040 6355 1040
+	1745 1830 1170 1830
 Wire Wire Line
-	5805 1040 5570 1040
+	1165 2030 1445 2030
 Wire Wire Line
-	5570 1040 5570 1455
+	2365 1830 2365 1770
 Wire Wire Line
-	5570 1455 5720 1455
-Connection ~ 5720 1455
+	2365 1770 1745 1770
 Wire Wire Line
-	5720 1455 5720 1350
+	1745 1770 1745 1830
+Connection ~ 1745 1830
 Wire Wire Line
-	5570 1455 5260 1455
-Connection ~ 5570 1455
+	1995 1810 2560 1810
 Wire Wire Line
-	6755 1040 6755 1835
+	2560 1810 2560 1830
+Wire Wire Line
+	2560 1830 2615 1830
+Wire Wire Line
+	1995 1810 1995 2030
+Text Label 1210 1830 0    50   ~ 0
+~ENA
 Text Label 1080 4640 0    50   ~ 0
-LED1
-Text Label 5320 1455 0    50   ~ 0
-LED1
-Wire Notes Line
-	5025 665  7230 665 
-Wire Notes Line
-	7230 665  7230 2330
-Wire Notes Line
-	7230 2330 5035 2330
-Wire Notes Line
-	5035 2330 5035 665 
+ENA
+$Comp
+L 74xGxx:74LVC2G240 U3
+U 1 1 5D3CFD17
+P 1735 1335
+F 0 "U3" H 1710 1160 50  0000 C CNN
+F 1 "74LVC2G240" H 1710 1069 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 1735 1335 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1735 1335 50  0001 C CNN
+	1    1735 1335
+	1    0    0    -1  
+$EndComp
+Connection ~ 1985 1335
+$Comp
+L 74xGxx:74LVC2G240 U3
+U 2 1 5D3D1343
+P 2360 1335
+F 0 "U3" H 2335 1160 50  0000 C CNN
+F 1 "74LVC2G240" H 2335 1069 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 2360 1335 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2360 1335 50  0001 C CNN
+	2    2360 1335
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2360 1135 2360 1055
+Wire Wire Line
+	2360 1055 1735 1055
+Wire Wire Line
+	1735 1055 1735 1135
+Wire Wire Line
+	1735 1135 1160 1135
+Connection ~ 1735 1135
+Wire Wire Line
+	1985 1095 2610 1095
+Wire Wire Line
+	2610 1095 2610 1135
+Wire Wire Line
+	1985 1095 1985 1335
+Text Label 1205 1135 0    50   ~ 0
+~ENA
+$Comp
+L Device:C_Small C6
+U 1 1 5D4A52B3
+P 6430 1515
+F 0 "C6" H 6522 1561 50  0000 L CNN
+F 1 "100nF" H 6522 1470 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6430 1515 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/UPY-GPHC_X7R_6.3V-to-50V_18-1154002.pdf" H 6430 1515 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT .1uF 50V X7R 5%" H 6430 1515 50  0001 C CNN "Description"
+F 5 "CC0603JRX7R9BB104" H 6430 1515 50  0001 C CNN "MPN"
+F 6 "Yageo" H 6430 1515 50  0001 C CNN "Manufacturer"
+	1    6430 1515
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6085 1415 6430 1415
+Wire Wire Line
+	6430 1615 6085 1615
+Connection ~ 6085 1415
+Connection ~ 6085 1615
+Connection ~ 5920 1415
+Wire Wire Line
+	5920 1415 6085 1415
+Connection ~ 5915 1615
+Wire Wire Line
+	5915 1615 5740 1615
+$Comp
+L Device:R_Small R4
+U 1 1 5D528700
+P 3875 3855
+F 0 "R4" V 3835 3985 50  0000 C CNN
+F 1 "10K" V 3870 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3875 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3875 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3875 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3875 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3875 3855 50  0001 C CNN "Manufacturer"
+	1    3875 3855
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5D545328
+P 3975 3855
+F 0 "R5" V 3935 3985 50  0000 C CNN
+F 1 "10K" V 3970 3855 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3975 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3975 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3975 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3975 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3975 3855 50  0001 C CNN "Manufacturer"
+	1    3975 3855
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5D561D88
+P 4075 3855
+F 0 "R6" V 4035 3985 50  0000 C CNN
+F 1 "10K" V 4070 3855 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4075 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 4075 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 4075 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 4075 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 4075 3855 50  0001 C CNN "Manufacturer"
+	1    4075 3855
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5D57E650
+P 4175 3855
+F 0 "R7" V 4135 3985 50  0000 C CNN
+F 1 "10K" V 4170 3855 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4175 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 4175 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 4175 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 4175 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 4175 3855 50  0001 C CNN "Manufacturer"
+	1    4175 3855
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5D59B61A
+P 4275 3855
+F 0 "R8" V 4230 3985 50  0000 C CNN
+F 1 "10K" V 4270 3855 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4275 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 4275 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 4275 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 4275 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 4275 3855 50  0001 C CNN "Manufacturer"
+	1    4275 3855
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5D5B84B2
+P 4375 3855
+F 0 "R9" V 4335 3985 50  0000 C CNN
+F 1 "10K" V 4370 3855 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4375 3855 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 4375 3855 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 4375 3855 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 4375 3855 50  0001 C CNN "MPN"
+F 6 "Bourns" H 4375 3855 50  0001 C CNN "Manufacturer"
+	1    4375 3855
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3875 3755 3875 3675
+Wire Wire Line
+	4375 3675 4375 3755
+Wire Wire Line
+	4275 3755 4275 3675
+Connection ~ 4275 3675
+Wire Wire Line
+	4275 3675 4375 3675
+Wire Wire Line
+	4175 3755 4175 3675
+Connection ~ 4175 3675
+Wire Wire Line
+	4175 3675 4275 3675
+Wire Wire Line
+	4075 3755 4075 3675
+Connection ~ 4075 3675
+Wire Wire Line
+	4075 3675 4130 3675
+Wire Wire Line
+	3875 3675 3975 3675
+Wire Wire Line
+	3975 3755 3975 3675
+Connection ~ 3975 3675
+Wire Wire Line
+	3975 3675 4075 3675
+Wire Wire Line
+	4130 3595 4130 3675
+Connection ~ 4130 3675
+Wire Wire Line
+	4130 3675 4175 3675
 Wire Bus Line
 	6915 3200 6915 4035
 Wire Bus Line
@@ -1389,6 +1462,4 @@ Wire Bus Line
 	5025 3200 5025 5525
 Wire Bus Line
 	8095 3225 8095 5655
-Text Notes 5160 2175 0    50   ~ 0
-Tri-stated LED driver
 $EndSCHEMATC
