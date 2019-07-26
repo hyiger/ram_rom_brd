@@ -1,0 +1,147 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
+# Date created = 01:58:01  July 26, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		z80_glue_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:35:07  JULY 25, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name SOURCE_FILE z80_glue.qsf
+set_global_assignment -name SDC_FILE z80_glue.sdc
+set_global_assignment -name VHDL_FILE z80_glue.vhd
+set_global_assignment -name VHDL_FILE sd_controller.vhd
+set_global_assignment -name VHDL_FILE clock_div.vhd
+set_global_assignment -name VHDL_FILE acia6850.vhd
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_12 -to clk
+set_location_assignment PIN_52 -to D[7]
+set_location_assignment PIN_53 -to D[6]
+set_location_assignment PIN_54 -to D[5]
+set_location_assignment PIN_55 -to D[4]
+set_location_assignment PIN_56 -to D[3]
+set_location_assignment PIN_57 -to D[2]
+set_location_assignment PIN_58 -to D[1]
+set_location_assignment PIN_61 -to D[0]
+set_location_assignment PIN_67 -to A[15]
+set_location_assignment PIN_68 -to A[14]
+set_location_assignment PIN_69 -to A[13]
+set_location_assignment PIN_70 -to A[12]
+set_location_assignment PIN_71 -to A[11]
+set_location_assignment PIN_72 -to A[10]
+set_location_assignment PIN_73 -to A[9]
+set_location_assignment PIN_74 -to A[8]
+set_location_assignment PIN_75 -to A[7]
+set_location_assignment PIN_76 -to A[6]
+set_location_assignment PIN_77 -to A[5]
+set_location_assignment PIN_78 -to A[4]
+set_location_assignment PIN_81 -to A[3]
+set_location_assignment PIN_82 -to A[2]
+set_location_assignment PIN_83 -to A[1]
+set_location_assignment PIN_84 -to A[0]
+set_location_assignment PIN_85 -to CPU_clk
+set_location_assignment PIN_86 -to nIORQ
+set_location_assignment PIN_87 -to nMREQ
+set_location_assignment PIN_89 -to nRD
+set_location_assignment PIN_90 -to nRESET
+set_location_assignment PIN_92 -to nWR
+set_location_assignment PIN_95 -to RTS
+set_location_assignment PIN_96 -to RX
+set_location_assignment PIN_97 -to TX
+set_location_assignment PIN_66 -to A16
+set_location_assignment PIN_98 -to nRAM_CS
+set_location_assignment PIN_99 -to nROM_CS
+set_location_assignment PIN_100 -to RAM_WE
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 125
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "MAX V"
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name AUTO_SHIFT_REGISTER_RECOGNITION ALWAYS
+set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name ALLOW_SHIFT_REGISTER_MERGING_ACROSS_HIERARCHIES ALWAYS
+set_global_assignment -name STATE_MACHINE_PROCESSING "ONE-HOT"
+set_global_assignment -name TOP_LEVEL_ENTITY z80_glue
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE 5M80ZT100I5
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 4.0
+set_global_assignment -name FITTER_AGGRESSIVE_ROUTABILITY_OPTIMIZATION AUTOMATICALLY
+set_global_assignment -name OPTIMIZE_TIMING "NORMAL COMPILATION"
+set_global_assignment -name AUTO_PACKED_REGISTERS_MAX NORMAL
+set_global_assignment -name GUARANTEE_MIN_DELAY_CORNER_IO_ZERO_HOLD_TIME OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+
+# ----------------------
+# start ENTITY(z80_glue)
+
+	# Fitter Assignments
+	# ==================
+	set_instance_assignment -name GLOBAL_SIGNAL GLOBAL_CLOCK -to clk
+	set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to nRESET
+
+# end ENTITY(z80_glue)
+# --------------------
