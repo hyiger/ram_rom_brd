@@ -44,12 +44,6 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:35:07  JULY 25, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name SOURCE_FILE z80_glue.qsf
-set_global_assignment -name SDC_FILE z80_glue.sdc
-set_global_assignment -name VHDL_FILE z80_glue.vhd
-set_global_assignment -name VHDL_FILE sd_controller.vhd
-set_global_assignment -name VHDL_FILE clock_div.vhd
-set_global_assignment -name VHDL_FILE acia6850.vhd
 
 # Pin & Location Assignments
 # ==========================
@@ -82,9 +76,9 @@ set_location_assignment PIN_85 -to CPU_clk
 set_location_assignment PIN_86 -to nIORQ
 set_location_assignment PIN_87 -to nMREQ
 set_location_assignment PIN_89 -to nRD
-set_location_assignment PIN_90 -to nRESET
+set_location_assignment PIN_51 -to nRESET
 set_location_assignment PIN_92 -to nWR
-set_location_assignment PIN_95 -to RTS
+set_location_assignment PIN_91 -to RTS
 set_location_assignment PIN_96 -to RX
 set_location_assignment PIN_97 -to TX
 set_location_assignment PIN_66 -to A16
@@ -114,7 +108,7 @@ set_global_assignment -name TOP_LEVEL_ENTITY z80_glue
 
 # Fitter Assignments
 # ==================
-set_global_assignment -name DEVICE 5M80ZT100I5
+set_global_assignment -name DEVICE 5M570ZT100I5
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 4.0
@@ -145,3 +139,10 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STI
 
 # end ENTITY(z80_glue)
 # --------------------
+set_global_assignment -name VHDL_FILE frac20.vhd
+set_global_assignment -name SOURCE_FILE z80_glue.qsf
+set_global_assignment -name SDC_FILE z80_glue.sdc
+set_global_assignment -name VHDL_FILE z80_glue.vhd
+set_global_assignment -name VHDL_FILE sd_controller.vhd
+set_global_assignment -name VHDL_FILE clock_div.vhd
+set_global_assignment -name VHDL_FILE acia6850.vhd

@@ -24,10 +24,17 @@ entity z80_glue is
 end z80_glue;
 
 architecture rtl of z80_glue is
+
+	constant BRD_FREQUENCY  : Real := 100_000_000.0;
+	constant CPU_FREQUENCY  : Real := 20_000_000.0;
+	constant UART_FREQUENCY : Real := 7_372_800.0;
+
 	signal nIORD : std_logic;
 	signal nIOWR : std_logic;
 	signal nInt  : std_logic;
 
+	signal Z80_clk : std_logic;
+	
 	signal UART_clk : std_logic;
 	signal UART_D   : std_logic_vector(7 downto 0);
 	signal UART_nCS : std_logic := '1';
@@ -43,14 +50,25 @@ architecture rtl of z80_glue is
 
 begin
 
-	-- Divide 100mHz by 5 
-	clk_20mhz : entity work.clock_div
+	clk_7_328mhz : entity work.fracn20
+		generic map(
+			input_frequency  => BRD_FREQUENCY,
+			output_frequency => UART_FREQUENCY
+		)
 		port map(
-			clk     => clk,
-			nRst    => nRESET,
-			divider => "0101",
-			clk_out => CPU_clk
+			clock     => clk,
+			output_50 => UART_clk
 		);
+		
+	clk_20mhz : entity work.fracn20
+		generic map(
+			input_frequency  => BRD_FREQUENCY,
+			output_frequency => CPU_FREQUENCY
+		)
+		port map(
+			clock     => clk,
+			output_50 => Z80_clk
+		);	
 
 	UART_RST <= not nRESET;
 	UART_CS  <= not UART_nCS;
@@ -106,4 +124,6 @@ begin
 
 	D <= UART_D when UART_nCS = '0' else (others => 'Z');
 
+	CPU_clk <= Z80_clk;
+	
 end rtl;
