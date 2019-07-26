@@ -1,4 +1,4 @@
-update=Wednesday, July 10, 2019 at 05:32:25 PM
+update=Thursday, July 25, 2019 at 05:19:48 PM
 version=1
 last_client=kicad
 [general]
@@ -28,6 +28,7 @@ MinViaDrill=0.2032
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
+CopperEdgeClearance=0.01
 TrackWidth1=0.25
 TrackWidth2=0.1524
 TrackWidth3=0.2032
@@ -64,7 +65,7 @@ CopperTextItalic=0
 CopperTextUpright=1
 EdgeCutLineWidth=0.05
 CourtyardLineWidth=0.05
-OthersLineWidth=0.15
+OthersLineWidth=0.09999999999999999
 OthersTextSizeV=1
 OthersTextSizeH=1
 OthersTextSizeThickness=0.15
@@ -79,11 +80,11 @@ Name=F.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
-Name=GND
+Name=In1.Cu
 Type=1
 Enabled=1
 [pcbnew/Layer.In2.Cu]
-Name=3V3
+Name=In2.Cu
 Type=1
 Enabled=1
 [pcbnew/Layer.In3.Cu]

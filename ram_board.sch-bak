@@ -833,8 +833,20 @@ Text Label 1510 3270 0    50   ~ 0
 A1
 Text Label 860  3370 0    50   ~ 0
 A0
+Text Label 1660 3370 2    50   ~ 0
+SW1_0
+Text Label 1010 3470 2    50   ~ 0
+SW1_1
+Text Label 1660 3470 2    50   ~ 0
+SW1_2
+Text Label 1010 3570 2    50   ~ 0
+SW1_3
+Text Label 1660 3570 2    50   ~ 0
+SW1_4
 Text Label 860  3670 0    50   ~ 0
 GND
+Text Label 1660 3670 2    50   ~ 0
+SW1_5
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D3B17EC
@@ -877,6 +889,45 @@ Wire Wire Line
 Wire Wire Line
 	600  4250 715  4250
 Connection ~ 2915 4459
+Connection ~ 3895 5365
+Connection ~ 3595 5365
+Connection ~ 3485 5860
+Connection ~ 3750 5365
+Connection ~ 3695 5365
+Connection ~ 3795 5365
+Connection ~ 3995 6360
+Connection ~ 3895 6260
+Connection ~ 3795 6160
+Connection ~ 3695 6060
+Connection ~ 3595 5960
+Wire Wire Line
+	3895 5365 3995 5365
+Wire Wire Line
+	3595 5445 3595 5365
+Wire Wire Line
+	3750 5285 3750 5365
+Wire Wire Line
+	3795 5365 3895 5365
+Wire Wire Line
+	3595 5365 3695 5365
+Wire Wire Line
+	3695 5445 3695 5365
+Wire Wire Line
+	3795 5445 3795 5365
+Wire Wire Line
+	3695 5365 3750 5365
+Wire Wire Line
+	3750 5365 3795 5365
+Wire Wire Line
+	3455 5860 3485 5860
+Wire Wire Line
+	3485 5645 3485 5860
+Wire Wire Line
+	3485 5445 3485 5365
+Wire Wire Line
+	3485 5860 4305 5860
+Wire Wire Line
+	3485 5365 3595 5365
 Wire Wire Line
 	4010 4462 4250 4462
 Wire Wire Line
@@ -887,6 +938,171 @@ Wire Wire Line
 	2917 4462 3410 4462
 Wire Wire Line
 	4010 4662 4250 4662
+Wire Wire Line
+	3895 5445 3895 5365
+Wire Wire Line
+	3455 6060 3695 6060
+Wire Wire Line
+	3455 6160 3795 6160
+Wire Wire Line
+	3595 5645 3595 5960
+Wire Wire Line
+	3695 5645 3695 6060
+Wire Wire Line
+	3795 5645 3795 6160
+Wire Wire Line
+	2855 6360 2850 6550
+Wire Wire Line
+	3895 5645 3895 6260
+Wire Wire Line
+	3995 5645 3995 6360
+Wire Wire Line
+	3455 6360 3995 6360
+Wire Wire Line
+	3455 6260 3895 6260
+Wire Wire Line
+	3795 6160 4305 6160
+Wire Wire Line
+	3695 6060 4305 6060
+Wire Wire Line
+	3455 5960 3595 5960
+Wire Wire Line
+	3595 5960 4305 5960
+Wire Wire Line
+	3895 6260 4305 6260
+Wire Wire Line
+	3995 6360 4305 6360
+Wire Wire Line
+	3995 5365 3995 5445
+$Comp
+L Switch:SW_DIP_x06 SW1
+U 1 1 5D3B37D2
+P 3155 6160
+F 0 "SW1" H 3155 6627 50  0000 C CNN
+F 1 "Config" H 3155 6536 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx06_Slide_KingTek_DSHP06TS_W7.62mm_P1.27mm" H 3155 6160 50  0001 C CNN
+F 3 "~" H 3155 6160 50  0001 C CNN
+	1    3155 6160
+	1    0    0    -1  
+$EndComp
+Text Label 4270 6160 2    50   ~ 0
+SW1_3
+Text Label 4275 6060 2    50   ~ 0
+SW1_2
+Text Label 4275 5960 2    50   ~ 0
+SW1_1
+Text Label 4280 5860 2    50   ~ 0
+SW1_0
+$Comp
+L power:GND #PWR0116
+U 1 1 5D3B37D3
+P 2850 6550
+F 0 "#PWR0116" H 2850 6300 50  0001 C CNN
+F 1 "GND" H 2855 6377 50  0000 C CNN
+F 2 "" H 2850 6550 50  0001 C CNN
+F 3 "" H 2850 6550 50  0001 C CNN
+	1    2850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 5D3B37D4
+P 3750 5285
+F 0 "#PWR0117" H 3750 5135 50  0001 C CNN
+F 1 "+3.3V" H 3765 5458 50  0000 C CNN
+F 2 "" H 3750 5285 50  0001 C CNN
+F 3 "" H 3750 5285 50  0001 C CNN
+	1    3750 5285
+	1    0    0    -1  
+$EndComp
+Text Label 4275 6260 2    50   ~ 0
+SW1_4
+$Comp
+L Device:R_Small R5
+U 1 1 5D3B37D5
+P 3595 5545
+F 0 "R5" V 3555 5675 50  0000 C CNN
+F 1 "10K" V 3590 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3595 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3595 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3595 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3595 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3595 5545 50  0001 C CNN "Manufacturer"
+	1    3595 5545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5D3B37D6
+P 3695 5545
+F 0 "R6" V 3655 5675 50  0000 C CNN
+F 1 "10K" V 3690 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3695 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3695 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3695 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3695 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3695 5545 50  0001 C CNN "Manufacturer"
+	1    3695 5545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5D3B37D7
+P 3795 5545
+F 0 "R7" V 3755 5675 50  0000 C CNN
+F 1 "10K" V 3790 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3795 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3795 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3795 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3795 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3795 5545 50  0001 C CNN "Manufacturer"
+	1    3795 5545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5D3B37D8
+P 3895 5545
+F 0 "R8" V 3850 5675 50  0000 C CNN
+F 1 "10K" V 3890 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3895 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3895 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3895 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3895 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3895 5545 50  0001 C CNN "Manufacturer"
+	1    3895 5545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5D3B37D9
+P 3995 5545
+F 0 "R9" V 3955 5675 50  0000 C CNN
+F 1 "10K" V 3990 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3995 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3995 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3995 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3995 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3995 5545 50  0001 C CNN "Manufacturer"
+	1    3995 5545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5D3B37DA
+P 3485 5545
+F 0 "R4" V 3445 5675 50  0000 C CNN
+F 1 "10K" V 3480 5545 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3485 5545 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/hpreztr-777398.pdf" H 3485 5545 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD 10K 1% 1/10W" H 3485 5545 50  0001 C CNN "Description"
+F 5 "CR0603-FX-1002ELF" H 3485 5545 50  0001 C CNN "MPN"
+F 6 "Bourns" H 3485 5545 50  0001 C CNN "Manufacturer"
+	1    3485 5545
+	-1   0    0    1   
+$EndComp
+Text Label 4275 6360 2    50   ~ 0
+SW1_5
 $Comp
 L Device:R_Small R1
 U 1 1 5D3B37DB
@@ -955,6 +1171,8 @@ Text Label 2997 4462 0    50   ~ 0
 LED_R
 Text Label 3001 4662 0    50   ~ 0
 LED_G
+Wire Wire Line
+	2855 5860 2855 5960
 Wire Wire Line
 	1575 6495 1575 6580
 Wire Wire Line
@@ -1137,30 +1355,20 @@ Connection ~ 715  4250
 Wire Wire Line
 	715  4250 1085 4250
 Connection ~ 1085 4550
+Connection ~ 2855 5960
+Wire Wire Line
+	2855 5960 2855 6060
+Connection ~ 2855 6060
+Wire Wire Line
+	2855 6060 2855 6160
+Connection ~ 2855 6160
+Wire Wire Line
+	2855 6160 2855 6260
+Connection ~ 2855 6260
+Wire Wire Line
+	2855 6260 2855 6360
+Connection ~ 2855 6360
 Connection ~ 6140 5000
 Wire Wire Line
 	6140 5000 7119 5000
-$Comp
-L Oscillator:ASV-xxxMHz X1
-U 1 1 5D3DEFD1
-P 5800 6200
-F 0 "X1" H 6144 6246 50  0000 L CNN
-F 1 "ASV-xxxMHz" H 6144 6155 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm" H 6500 5850 50  0001 C CNN
-F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 5700 6200 50  0001 C CNN
-	1    5800 6200
-	1    0    0    -1  
-$EndComp
-Text Label 2050 3400 2    50   ~ 0
-~MREQ
-Text Label 2000 3500 2    50   ~ 0
-~IORQ
-Text Label 2100 3650 2    50   ~ 0
-~BUSREQ
-Text Label 700  3500 2    50   ~ 0
-~WAIT
-Text Label 700  3600 2    50   ~ 0
-CLK
-Text Label 2350 3800 2    50   ~ 0
-~RESET
 $EndSCHEMATC

@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name ram_board-rescue)(type Legacy)(uri ${KIPRJMOD}/ram_board-rescue.lib)(options "")(descr ""))
+  (lib (name "ram_board-rescue")(type "Legacy")(uri "${KIPRJMOD}/ram_board-rescue.lib")(options "")(descr ""))
+  (lib (name "sbc_z80-rescue")(type "Legacy")(uri "/Users/rlewis/Documents/gitrepo/sbc_z80/sbc_z80-rescue.lib")(options "")(descr ""))
 )
