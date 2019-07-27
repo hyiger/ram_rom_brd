@@ -80,7 +80,6 @@ begin
 		nMREQ <= '1';
 		nWR   <= '1';
 		nIORQ <= '1';
-		A16   <= '0';
 
 		A <= (others => '0');
 		D <= (others => '0');

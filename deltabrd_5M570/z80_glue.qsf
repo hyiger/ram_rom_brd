@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
-# Date created = 01:58:01  July 26, 2019
+# Date created = 19:36:03  July 26, 2019
 #
 # -------------------------------------------------------------------------- #
 #
@@ -44,6 +44,18 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:35:07  JULY 25, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VHDL_FILE fracn_73728.vhd
+set_global_assignment -name VHDL_FILE fracn_20.vhd
+set_global_assignment -name VHDL_FILE fracn_10.vhd
+set_global_assignment -name VHDL_FILE fracn_1.vhd
+set_global_assignment -name VHDL_FILE frac20.vhd
+set_global_assignment -name VHDL_FILE z80_glue_tb.vhd
+set_global_assignment -name SOURCE_FILE z80_glue.qsf
+set_global_assignment -name SDC_FILE z80_glue.sdc
+set_global_assignment -name VHDL_FILE z80_glue.vhd
+set_global_assignment -name VHDL_FILE sd_controller.vhd
+set_global_assignment -name VHDL_FILE clock_div.vhd
+set_global_assignment -name VHDL_FILE acia6850.vhd
 
 # Pin & Location Assignments
 # ==========================
@@ -92,6 +104,10 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 125
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 
+# Compiler Assignments
+# ====================
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "MAX V"
@@ -124,37 +140,91 @@ set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+set_global_assignment -name ECO_OPTIMIZE_TIMING ON
+set_global_assignment -name OPTIMIZE_IOC_REGISTER_PLACEMENT_FOR_TIMING "PACK ALL IO REGISTERS"
+set_global_assignment -name AUTO_DELAY_CHAINS_FOR_HIGH_FANOUT_INPUT_PINS ON
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (VHDL)"
 
 # Power Estimation Assignments
 # ============================
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+
+# start EDA_TEST_BENCH_SETTINGS(z80_glue_tb)
+# ------------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id z80_glue_tb
+	set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME z80_glue_tb -section_id z80_glue_tb
+	set_global_assignment -name EDA_TEST_BENCH_FILE z80_glue_tb.vhd -section_id z80_glue_tb -hdl_version VHDL_1993
+
+# end EDA_TEST_BENCH_SETTINGS(z80_glue_tb)
+# ----------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+	set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+	set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH z80_glue_tb -section_id eda_simulation
+	set_global_assignment -name EDA_TEST_BENCH_NAME z80_glue_tb -section_id eda_simulation
+	set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_boundary_scan)
+# -------------------------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+
+# end EDA_TOOL_SETTINGS(eda_board_design_boundary_scan)
+# -----------------------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_timing)
+# ------------------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+
+# end EDA_TOOL_SETTINGS(eda_board_design_timing)
+# ----------------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_symbol)
+# ------------------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+
+# end EDA_TOOL_SETTINGS(eda_board_design_symbol)
+# ----------------------------------------------
+
+# start EDA_TOOL_SETTINGS(eda_board_design_signal_integrity)
+# ----------------------------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+
+# end EDA_TOOL_SETTINGS(eda_board_design_signal_integrity)
+# --------------------------------------------------------
 
 # ----------------------
 # start ENTITY(z80_glue)
 
 	# Fitter Assignments
 	# ==================
-set_instance_assignment -name GLOBAL_SIGNAL GLOBAL_CLOCK -to clk
-set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to nRESET
+	set_instance_assignment -name GLOBAL_SIGNAL GLOBAL_CLOCK -to clk
+	set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to nRESET
 
 # end ENTITY(z80_glue)
 # --------------------
-set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
-set_global_assignment -name ECO_OPTIMIZE_TIMING ON
-set_global_assignment -name OPTIMIZE_IOC_REGISTER_PLACEMENT_FOR_TIMING "PACK ALL IO REGISTERS"
-set_global_assignment -name AUTO_DELAY_CHAINS_FOR_HIGH_FANOUT_INPUT_PINS ON
-set_global_assignment -name VHDL_FILE z80_glue_tb.vhd
-set_global_assignment -name SOURCE_FILE z80_glue.qsf
-set_global_assignment -name SDC_FILE z80_glue.sdc
-set_global_assignment -name VHDL_FILE z80_glue.vhd
-set_global_assignment -name VHDL_FILE sd_controller.vhd
-set_global_assignment -name VHDL_FILE clock_div.vhd
-set_global_assignment -name VHDL_FILE acia6850.vhd
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH z80_glue_tb -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_NAME z80_glue_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id z80_glue_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME z80_glue_tb -section_id z80_glue_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE z80_glue_tb.vhd -section_id z80_glue_tb -hdl_version VHDL_1993

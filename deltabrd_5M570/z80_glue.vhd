@@ -4,7 +4,7 @@ use ieee.numeric_std.ALL;
 
 entity z80_glue is
 	generic(
-		DEBUG : natural := 1            -- 0 = no debug, 1 = use simple dividers for debug
+		DEBUG : natural := 0            -- 0 = no debug, 1 = use one clock for debug
 	);
 	port(
 		clk     : in    std_logic;
@@ -45,34 +45,32 @@ architecture rtl of z80_glue is
 	signal UART_CS  : std_logic := '0';
 
 	signal ROM_nCS : std_logic := '1';
-	signal nPage   : std_logic := '0';
+	signal ROM_nPAGE   : std_logic := '0';
 
 	signal RAM_nWR : std_logic := '1';
 	signal RAM_nRD : std_logic;
 	signal RAM_nCS : std_logic := '1';
-
+	signal RAM_PAGE : std_logic := '0';
 begin
 
 	frac_div_clk : if DEBUG = 0 generate
---		clk_7_328mhz : entity work.fracn20
---			generic map(
---				input_frequency  => BRD_FREQUENCY,
---				output_frequency => UART_FREQUENCY
---			)
---			port map(
---				clock     => clk,
---				output_50 => UART_clk
---			);
---
---		clk_10mhz : entity work.fracn20
---			generic map(
---				input_frequency  => BRD_FREQUENCY,
---				output_frequency => CPU_FREQUENCY
---			)
---			port map(
---				clock     => clk,
---				output_50 => Z80_clk
---			);
+		clk_7_328mhz : entity work.fracn_73728
+			generic map(
+				minimum_jitter => true
+			)
+			port map(
+				clock     => clk,
+				output_50 => UART_clk
+			);
+
+		clk_10mhz : entity work.fracn_10
+			generic map(
+				minimum_jitter => true
+			)
+			port map(
+				clock     => clk,
+				output_50 => Z80_clk
+			);
 	end generate frac_div_clk;
 
 	simple_clk : if DEBUG = 1 generate
@@ -103,15 +101,15 @@ begin
 			RTS_n    => rts             -- Request To send
 		);
 
-	paging : process(nReset, nIOWR)
+	page : process(nReset, nIOWR)
 	begin
 		if (nReset = '0') then
-			nPage <= '0';
-			A16 <= '0';
+			ROM_nPAGE <= '0';
+			RAM_PAGE <= '0';
 		elsif (falling_edge(nIOWR)) then
 			if A(7 downto 0) = x"38" then
-				nPage <= D(0);
-				A16   <= D(7);
+				ROM_nPAGE <= D(0);
+				RAM_PAGE <= D(7);
 			end if;
 		end if;
 	end process;
@@ -120,7 +118,7 @@ begin
 	UART_nCS <= '0' when A(7 downto 1) = "1000000" and (nIOWR = '0' or nIORD = '0') else '1';
 
 	-- Select ROM from address range 7FFF - 0000 if not paged out
-	ROM_nCS <= '0' when A(15) = '0' and nPage = '0' else '1';
+	ROM_nCS <= '0' when A(15) = '0' and ROM_nPAGE = '0' else '1';
 
 	RAM_nRD <= nRD or nMREQ;
 	RAM_nWR <= nWR or nMREQ;
@@ -136,5 +134,7 @@ begin
 	D <= UART_D when UART_nCS = '0' else (others => 'Z');
 
 	CPU_clk <= Z80_clk;
+	
+	A16 <= RAM_PAGE;
 
 end rtl;
