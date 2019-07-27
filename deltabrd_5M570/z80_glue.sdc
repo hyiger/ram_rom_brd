@@ -11,7 +11,7 @@ create_clock -period "100.0 MHz" [get_ports clk]
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
-derive_pll_clocks
+#derive_pll_clocks
 
 
 
@@ -24,7 +24,7 @@ derive_pll_clocks
 #**************************************************************
 # Set Clock Uncertainty
 #**************************************************************
-derive_clock_uncertainty
+#derive_clock_uncertainty
 
 
 
@@ -49,7 +49,8 @@ derive_clock_uncertainty
 #**************************************************************
 # Set False Path
 #**************************************************************
-set_false_path -from [get_ports nWR]
+set_false_path -from [get_ports nRESET]
+set_false_path -from [get_ports nIORQ]
 #set_false_path -from [get_ports SW*]
 
 #**************************************************************
@@ -61,7 +62,6 @@ set_false_path -from [get_ports nWR]
 #**************************************************************
 # Set Maximum Delay
 #**************************************************************
-
 
 
 #**************************************************************

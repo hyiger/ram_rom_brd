@@ -319,7 +319,7 @@ begin
 	---------------------------------------------------------------
 	-- ACIA Reset may be hardware or software
 	---------------------------------------------------------------
-	acia_reset : process(clk, rst, ac_rst, dcd_n)
+	acia_reset : process(clk, ac_rst, dcd_n)
 	begin
 		--
 		-- ACIA reset Synchronous 
@@ -339,7 +339,7 @@ begin
 	-- Generate Read / Write strobes.
 	-----------------------------------------------------------------------------
 
-	acia_read_write : process(clk, ac_rst)
+	acia_read_write : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rst = '1' then
@@ -441,7 +441,7 @@ begin
 	---------------------------------------------------------------
 	-- Data Carrier Detect Edge rising edge detect
 	---------------------------------------------------------------
-	acia_dcd_edge : process(clk, ac_rst)
+	acia_dcd_edge : process(clk)
 	begin
 		if falling_edge(clk) then
 			if ac_rst = '1' then
@@ -461,7 +461,7 @@ begin
 	-- To clear the interrupt, first read the status register
 	--      then read the data receive register
 
-	acia_dcd_int : process(clk, ac_rst)
+	acia_dcd_int : process(clk)
 	begin
 		if falling_edge(clk) then
 			if ac_rst = '1' then
@@ -499,7 +499,7 @@ begin
 	---------------------------------------------------------------------
 	-- A rising edge will produce a one clock cycle pulse
 	--
-	acia_rx_clock_edge : process(clk, rx_rst)
+	acia_rx_clock_edge : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -517,7 +517,7 @@ begin
 	---------------------------------------------------------------------
 	-- A falling edge will produce a pulse on RxClk wide
 	--
-	acia_rx_data_edge : process(clk, rx_rst)
+	acia_rx_data_edge : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -540,7 +540,7 @@ begin
 	-- Enable the receive clock on detection of a start bit
 	-- Disable the receive clock after a byte is received.
 	-- 
-	acia_rx_start_stop : process(clk, rx_rst)
+	acia_rx_start_stop : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -566,7 +566,7 @@ begin
 	-- Hold the Rx Clock divider in reset when the receiver is disabled
 	-- Advance the count only on a rising Rx clock edge
 	--
-	acia_rx_clock_divide : process(clk, rx_rst)
+	acia_rx_clock_divide : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -616,7 +616,7 @@ begin
 	-- 1 0 1   - 8 data, no   parity, 1 stop
 	-- 1 1 0   - 8 data, even parity, 1 stop
 	-- 1 1 1   - 8 data, odd  parity, 1 stop
-	acia_rx_receive : process(clk, rst)
+	acia_rx_receive : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -700,7 +700,7 @@ begin
 	---------------------------------------------------------------------
 	-- Receiver Read process
 	---------------------------------------------------------------------
-	acia_rx_read : process(clk, rst, RxRdy)
+	acia_rx_read : process(clk)
 	begin
 		if falling_edge(clk) then
 			if rx_rst = '1' then
@@ -725,7 +725,7 @@ begin
 	-- A falling edge will produce a one clock cycle pulse
 	---------------------------------------------------------------------
 
-	acia_tx_clock_edge : process(Clk, tx_rst)
+	acia_tx_clock_edge : process(Clk)
 	begin
 		if falling_edge(clk) then
 			if tx_rst = '1' then
@@ -743,7 +743,7 @@ begin
 	-- Advance the count only on an input clock pulse
 	---------------------------------------------------------------------
 
-	acia_tx_clock_divide : process(clk, tx_rst)
+	acia_tx_clock_divide : process(clk)
 	begin
 		if falling_edge(clk) then
 			if tx_rst = '1' then
@@ -788,7 +788,7 @@ begin
 	-- 1 0 1   - 8 data, no   parity, 1 stop
 	-- 1 1 0   - 8 data, even parity, 1 stop
 	-- 1 1 1   - 8 data, odd  parity, 1 stop
-	acia_tx_transmit : process(clk, tx_rst)
+	acia_tx_transmit : process(clk)
 	begin
 		if falling_edge(clk) then
 			if tx_rst = '1' then
@@ -828,7 +828,7 @@ begin
 							TxShiftReg <= '1' & TxShiftReg(7 downto 1);
 							TxParity   <= TxParity xor TxShiftReg(0);
 							TxBitCount <= TxBitCount - "001";
-							if TxBitCount = "000" then
+							if TxBitCount =  "000" then
 								if (WdFmt(2) = '1') and (WdFmt(1) = '0') then
 									if WdFmt(0) = '0' then -- 8 data bits
 										TxState <= TxState_Stop; -- 2 stops
@@ -869,7 +869,7 @@ begin
 	-- Transmitter Write process
 	---------------------------------------------------------------------
 
-	acia_tx_write : process(clk, tx_rst, TxWr, TxReq, TxAck)
+	acia_tx_write : process(clk)
 	begin
 		if falling_edge(clk) then
 			if tx_rst = '1' then

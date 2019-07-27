@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.ALL;
 
 entity z80_glue is
+	generic(
+		DEBUG : natural := 1            -- 0 = no debug, 1 = use simple dividers for debug
+	);
 	port(
 		clk     : in    std_logic;
 		A       : in    std_logic_vector(15 downto 0);
@@ -26,52 +29,59 @@ end z80_glue;
 architecture rtl of z80_glue is
 
 	constant BRD_FREQUENCY  : Real := 100_000_000.0;
-	constant CPU_FREQUENCY  : Real := 20_000_000.0;
+	constant CPU_FREQUENCY  : Real := 10_000_000.0;
 	constant UART_FREQUENCY : Real := 7_372_800.0;
 
-	signal nIORD : std_logic;
-	signal nIOWR : std_logic;
+	signal nIORD : std_logic := '1';
+	signal nIOWR : std_logic := '1';
 	signal nInt  : std_logic;
 
 	signal Z80_clk : std_logic;
-	
+
 	signal UART_clk : std_logic;
 	signal UART_D   : std_logic_vector(7 downto 0);
 	signal UART_nCS : std_logic := '1';
-	signal UART_RST : std_logic;
-	signal UART_CS  : std_logic;
+	signal UART_RST : std_logic := '0';
+	signal UART_CS  : std_logic := '0';
 
 	signal ROM_nCS : std_logic := '1';
 	signal nPage   : std_logic := '0';
 
 	signal RAM_nWR : std_logic := '1';
-	signal RAM_nRD : std_logic := '1';
+	signal RAM_nRD : std_logic;
 	signal RAM_nCS : std_logic := '1';
 
 begin
 
-	clk_7_328mhz : entity work.fracn20
-		generic map(
-			input_frequency  => BRD_FREQUENCY,
-			output_frequency => UART_FREQUENCY
-		)
-		port map(
-			clock     => clk,
-			output_50 => UART_clk
-		);
-		
-	clk_20mhz : entity work.fracn20
-		generic map(
-			input_frequency  => BRD_FREQUENCY,
-			output_frequency => CPU_FREQUENCY
-		)
-		port map(
-			clock     => clk,
-			output_50 => Z80_clk
-		);	
+	frac_div_clk : if DEBUG = 0 generate
+--		clk_7_328mhz : entity work.fracn20
+--			generic map(
+--				input_frequency  => BRD_FREQUENCY,
+--				output_frequency => UART_FREQUENCY
+--			)
+--			port map(
+--				clock     => clk,
+--				output_50 => UART_clk
+--			);
+--
+--		clk_10mhz : entity work.fracn20
+--			generic map(
+--				input_frequency  => BRD_FREQUENCY,
+--				output_frequency => CPU_FREQUENCY
+--			)
+--			port map(
+--				clock     => clk,
+--				output_50 => Z80_clk
+--			);
+	end generate frac_div_clk;
+
+	simple_clk : if DEBUG = 1 generate
+		UART_clk <= clk;
+		Z80_clk  <= clk;
+	end generate simple_clk;
 
 	UART_RST <= not nRESET;
-	UART_CS  <= not UART_nCS;
+	UART_CS <= not UART_nCS;
 
 	uart1 : entity work.acia6850
 		port map(
@@ -97,7 +107,8 @@ begin
 	begin
 		if (nReset = '0') then
 			nPage <= '0';
-		elsif (rising_edge(nIOWR)) then
+			A16 <= '0';
+		elsif (falling_edge(nIOWR)) then
 			if A(7 downto 0) = x"38" then
 				nPage <= D(0);
 				A16   <= D(7);
@@ -125,5 +136,5 @@ begin
 	D <= UART_D when UART_nCS = '0' else (others => 'Z');
 
 	CPU_clk <= Z80_clk;
-	
+
 end rtl;
