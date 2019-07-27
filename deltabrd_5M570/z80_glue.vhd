@@ -117,13 +117,13 @@ begin
 	
 	-- Uses I/O port 0x38 for paging
 	-- Bit 0 - toggle ROM page out, Bit 7 - toggle RAM high/low 64K page
-	page : process(nReset, nIOWR)
+	page : process(nReset, clk)
 	begin
 		if (nReset = '0') then
 			ROM_nPAGE <= '0';
 			RAM_PAGE <= '0';
-		elsif (falling_edge(nIOWR)) then
-			if A(7 downto 0) = x"38" then
+		elsif (rising_edge(clk)) then
+			if nIOWR = '0' and A(7 downto 0) = x"38" then
 				ROM_nPAGE <= D(0);
 				RAM_PAGE <= D(7);
 			end if;

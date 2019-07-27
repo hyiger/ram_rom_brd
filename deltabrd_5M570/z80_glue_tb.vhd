@@ -84,8 +84,8 @@ begin
 		D <= (others => '0');
 
 		-- Reset for 3 clock cycles
-		nRESET <= '1', '0' after clock_period, '1' after clock_period * 3;
-		wait until rising_edge(nRESET);
+		nRESET <= '0', '1' after clock_period * 3;
+		wait for clock_period * 3;
 		
 -----------------------------------------------------------------------------------------------------
 		-- Test ROM paging
@@ -101,7 +101,6 @@ begin
 		assert nROM_CS = '1' and nRAM_CS = '0' report "ROM should be swapped out" severity error;
 
 		  -- test page in
-		nWR  <= '1', '0' after clock_period / 2;
 		D(0) <= '0';
 		wait for clock_period;
 		assert nROM_CS = '0' and nRAM_CS = '1' report "ROM should be swapped in" severity error;
@@ -111,15 +110,13 @@ begin
 		-- Test RAM Paging
 		
 		    -- test page high
-		nWR   <= '1', '0' after clock_period;
 		D(7)  <= '1';
-		wait for clock_period * 2;
+		wait for clock_period;
 		assert A16 = '1' report "RAM high page should be selected" severity error;
 
 		   -- test page low
-		nWR   <= '1', '0' after clock_period;
 		D(7)  <= '0';
-		wait for clock_period * 2;
+		wait for clock_period;
 		assert A16 = '0' report "RAM low page should be selected" severity error;
 -----------------------------------------------------------------------------------------------------		
 		-- Test ROM Read
@@ -137,7 +134,7 @@ begin
 		
 		   -- test write
 		A(15) <= '1';
-		wait for clock_period * 2;
+		wait for clock_period;
 		assert nROM_CS = '1' report "ROM should not be selected" severity error;
 		assert nRAM_CS = '0' report "RAM should selected" severity error;
 		assert RAM_WE = '1' report "RAM should be write enabled" severity error;
@@ -145,7 +142,7 @@ begin
 		  -- test read
 		nRD <= '0';
 		nWR <= '1';
-		wait for clock_period * 2;
+		wait for clock_period;
 		assert nRAM_CS = '0' report "RAM should selected" severity error;
 		assert RAM_WE = '0' report "RAM write enable should be off" severity error;
 -----------------------------------------------------------------------------------------------------
