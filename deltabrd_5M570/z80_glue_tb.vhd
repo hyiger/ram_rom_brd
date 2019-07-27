@@ -126,7 +126,7 @@ begin
 		nRD   <= '1';
 		nMREQ	<= '1';
 		nIORQ <= '0';
-		nWR   <= '1' after clock_period, '0';
+		nWR   <= '1', '0' after clock_period;
 		wait for clock_period * 2;
 		assert A16 = '1' report "RAM page should be selected" severity error;
 
