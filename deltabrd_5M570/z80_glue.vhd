@@ -4,7 +4,8 @@ use ieee.numeric_std.ALL;
 
 entity z80_glue is
 	generic(
-		DEBUG : natural := 0            -- 0 = no debug, 1 = use one clock for debug
+		DEBUG : natural := 0;            -- 0 = no debug, 1 = use one clock for debug
+		USE_UART : natural := 1            -- 0 = no uart, 1 = generate ACIA uart
 	);
 	port(
 		clk     : in    std_logic;
@@ -53,16 +54,20 @@ architecture rtl of z80_glue is
 	signal RAM_PAGE : std_logic := '0';
 begin
 
+	-- setup clocks
 	frac_div_clk : if DEBUG = 0 generate
-		clk_7_328mhz : entity work.fracn_73728
-			generic map(
-				minimum_jitter => true
-			)
-			port map(
-				clock     => clk,
-				output_50 => UART_clk
-			);
-
+	
+		u2: if USE_UART = 1 generate
+			clk_7_328mhz : entity work.fracn_73728
+				generic map(
+					minimum_jitter => true
+				)
+				port map(
+					clock     => clk,
+					output_50 => UART_clk
+				);
+		end generate u2;
+		
 		clk_10mhz : entity work.fracn_10
 			generic map(
 				minimum_jitter => true
@@ -73,34 +78,45 @@ begin
 			);
 	end generate frac_div_clk;
 
+	-- For debugging use only 1 clock
 	simple_clk : if DEBUG = 1 generate
 		UART_clk <= clk;
 		Z80_clk  <= clk;
 	end generate simple_clk;
 
-	UART_RST <= not nRESET;
-	UART_CS <= not UART_nCS;
+	uart : if USE_UART = 1 generate
+		UART_RST <= not nRESET;
+		UART_CS <= not UART_nCS;
 
-	uart1 : entity work.acia6850
-		port map(
-			clk      => clk,            -- System Clock
-			rst      => UART_RST,       -- Reset input (active high)
-			cs       => UART_CS,        -- miniUART Chip Select
-			addr     => A(0),           -- Register Select
-			rw       => nWR,            -- Read / Not Write  1 - Read, 0 - Write
-			data_in  => D,              -- Data Bus In 
-			data_out => UART_D,         -- Data Bus Out
-			irq      => nINT,           -- Interrupt Request out
+		-- Standard ACIA UART
+		-- Expects frequency is 7.3728Mhz and divider set to 64 for 115200,8,N,1
+		uart1 : entity work.acia6850
+			port map(
+				clk      => clk,            -- System Clock
+				rst      => UART_RST,       -- Reset input (active high)
+				cs       => UART_CS,        -- miniUART Chip Select
+				addr     => A(0),           -- Register Select
+				rw       => nWR,            -- Read / Not Write  1 - Read, 0 - Write
+				data_in  => D,              -- Data Bus In 
+				data_out => UART_D,         -- Data Bus Out
+				irq      => nINT,           -- Interrupt Request out
 
-			RxC      => UART_clk,       -- Receive Baud Clock
-			TxC      => UART_clk,       -- Transmit Baud Clock
-			RxD      => RX,             -- Receive Data
-			TxD      => TX,             -- Transmit Data
-			DCD_n    => '0',            -- Data Carrier Detect
-			CTS_n    => '0',            -- Clear To Send
-			RTS_n    => rts             -- Request To send
-		);
+				RxC      => UART_clk,       -- Receive Baud Clock
+				TxC      => UART_clk,       -- Transmit Baud Clock
+				RxD      => RX,             -- Receive Data
+				TxD      => TX,             -- Transmit Data
+				DCD_n    => '0',            -- Data Carrier Detect
+				CTS_n    => '0',            -- Clear To Send
+				RTS_n    => rts             -- Request To send
+			);
 
+		-- Serial Channel A - 2 Bytes $80-$81
+		UART_nCS <= '0' when A(7 downto 1) = "1000000" and (nIOWR = '0' or nIORD = '0') else '1';
+		D <= UART_D when UART_nCS = '0' else (others => 'Z');
+	end generate uart;
+	
+	-- Uses I/O port 0x38 for paging
+	-- Bit 0 - toggle ROM page out, Bit 7 - toggle RAM high/low 64K page
 	page : process(nReset, nIOWR)
 	begin
 		if (nReset = '0') then
@@ -113,10 +129,7 @@ begin
 			end if;
 		end if;
 	end process;
-
-	-- Serial Channel A - 2 Bytes $80-$81
-	UART_nCS <= '0' when A(7 downto 1) = "1000000" and (nIOWR = '0' or nIORD = '0') else '1';
-
+	
 	-- Select ROM from address range 7FFF - 0000 if not paged out
 	ROM_nCS <= '0' when A(15) = '0' and ROM_nPAGE = '0' else '1';
 
@@ -130,8 +143,6 @@ begin
 
 	nRAM_CS <= RAM_nCS;
 	nROM_CS <= ROM_nCS;
-
-	D <= UART_D when UART_nCS = '0' else (others => 'Z');
 
 	CPU_clk <= Z80_clk;
 	

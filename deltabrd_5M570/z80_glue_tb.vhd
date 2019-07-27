@@ -74,60 +74,81 @@ begin
 
 	stimulus : process
 	begin
-		-- Put initialisation code here
-
-		nRD   <= '1';
-		nMREQ <= '1';
-		nWR   <= '1';
-		nIORQ <= '1';
+	
+		nWR <= '1';
+		nRD <= '1';
+		nIORQ  <= '1';
+		nMREQ	<= '1';
 
 		A <= (others => '0');
 		D <= (others => '0');
 
+		-- Reset for 3 clock cycles
 		nRESET <= '1', '0' after clock_period, '1' after clock_period * 3;
-
 		wait until rising_edge(nRESET);
-
-		-- Test page out
+		
+-----------------------------------------------------------------------------------------------------
+		-- Test ROM paging
+		
+		   -- test page out
 		nIORQ         <= '0';
+		nMREQ			  <= '1';
 		nWR           <= '0';
+		nRD			  <= '1';
 		D(0)          <= '1';
 		A(7 downto 0) <= x"38";
 		wait for clock_period;
 		assert nROM_CS = '1' and nRAM_CS = '0' report "ROM should be swapped out" severity error;
 
-		-- Test page in
-		D(0) <= '0';
+		  -- test page in
 		nWR  <= '1', '0' after clock_period / 2;
+		D(0) <= '0';
 		wait for clock_period;
 		assert nROM_CS = '0' and nRAM_CS = '1' report "ROM should be swapped in" severity error;
-
-		-- Test RAM Write
-		A(15) <= '1';
-		nIORQ <= '1';
-		nMREQ <= '0';
-		nRD   <= '1';
-		nWR   <= '0';
+		
+-----------------------------------------------------------------------------------------------------
+		
+		-- Test RAM Paging
+		
+		    -- test page high
+		nWR   <= '1', '0' after clock_period;
+		D(7)  <= '1';
 		wait for clock_period * 2;
+		assert A16 = '1' report "RAM high page should be selected" severity error;
+
+		   -- test page low
+		nWR   <= '1', '0' after clock_period;
+		D(7)  <= '0';
+		wait for clock_period * 2;
+		assert A16 = '0' report "RAM low page should be selected" severity error;
+-----------------------------------------------------------------------------------------------------		
+		-- Test ROM Read
+
+		nMREQ <= '0';
+		nIORQ <= '1';
+		nWR   <= '0';
+		nRD   <= '1';
+		
+		assert nRAM_CS = '1' report "RAM should not be selected" severity error;
+		assert nROM_CS = '0' report "ROM should be selected" severity error;
+-----------------------------------------------------------------------------------------------------
+
+		-- Test RAM Read/Write
+		
+		   -- test write
+		A(15) <= '1';
+		wait for clock_period * 2;
+		assert nROM_CS = '1' report "ROM should not be selected" severity error;
 		assert nRAM_CS = '0' report "RAM should selected" severity error;
 		assert RAM_WE = '1' report "RAM should be write enabled" severity error;
 
-		-- Test RAM Read
+		  -- test read
 		nRD <= '0';
 		nWR <= '1';
 		wait for clock_period * 2;
 		assert nRAM_CS = '0' report "RAM should selected" severity error;
 		assert RAM_WE = '0' report "RAM write enable should be off" severity error;
-
-		-- Test RAM Paging
-
-		D(7)  <= '1';
-		nRD   <= '1';
-		nMREQ	<= '1';
-		nIORQ <= '0';
-		nWR   <= '1', '0' after clock_period;
-		wait for clock_period * 2;
-		assert A16 = '1' report "RAM page should be selected" severity error;
+-----------------------------------------------------------------------------------------------------
 
 		stop_the_clock <= true;
 		wait;
