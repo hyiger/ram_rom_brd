@@ -241,22 +241,6 @@ X Vdd 4 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# power_+3.3V
-#
-DEF power_+3.3V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3.3V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
@@ -397,21 +381,6 @@ X A6 6 -600 600 200 R 50 50 1 1 I
 X A5 7 -600 700 200 R 50 50 1 1 I
 X A4 8 -600 800 200 R 50 50 1 1 I
 X A3 9 -600 900 200 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# sbc_z80-rescue_+5V-power
-#
-DEF sbc_z80-rescue_+5V-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "sbc_z80-rescue_+5V-power" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
