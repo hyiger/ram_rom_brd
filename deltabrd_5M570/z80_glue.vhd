@@ -47,6 +47,8 @@ architecture rtl of z80_glue is
 	signal RAM_nRD  : std_logic;
 	signal RAM_nCS  : std_logic := '1';
 	signal RAM_PAGE : std_logic := '0';
+	
+	signal busy : std_logic;
 begin
 
 	-- setup clocks
@@ -110,6 +112,20 @@ begin
 		D        <= UART_D when UART_nCS = '0' else (others => 'Z');
 	end generate uart;
 
+	i2c : ENTITY work.i2c_master
+	  GENERIC map(
+		 input_clk => 50_000_000, --input clock speed from user logic in Hz
+		 bus_clk  => 400_000)   --speed the i2c bus (scl) will run at in Hz
+	  PORT map(
+			 clk       => clk,                    --system clock
+			 reset_n   => nReset,                    --active low reset
+			 ena       => '1',                    --latch in command
+			 addr      => "1100111", --address of target slave
+			 rw        => '0',                    --'0' is write, '1' is read
+			 data_wr   => D,					 --data to write to slave
+			 busy      => busy                    --indicates transaction in progress
+		 );                   
+	
 	-- Uses I/O port 0x38 for paging
 	-- Bit 0 - toggle ROM page out, Bit 7 - toggle RAM high/low 64K page
 	page : process(nReset, clk)

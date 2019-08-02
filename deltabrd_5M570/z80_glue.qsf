@@ -227,3 +227,4 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STI
 
 # end ENTITY(z80_glue)
 # --------------------
+set_global_assignment -name VHDL_FILE i2c_master.vhd
